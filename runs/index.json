@@ -1,12 +1,32 @@
 {
   "entries": [
     {
+      "id": "20251110085727",
+      "createdAt": "2025-11-10T08:57:27.494Z",
+      "source": "schedule",
+      "runCount": 1,
+      "scenarioIds": [
+        "scene-1761666883269"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
+      "scheduleId": "daily-resume",
+      "scheduleName": "每日简历",
+      "jsonPath": "runs/runs-20251110085727.json",
+      "csvPath": "runs/runs-20251110085727.csv"
+    },
+    {
       "id": "runs-20251102071347",
       "createdAt": "2025-11-02T07:13:47.000Z",
       "source": "manual",
       "runCount": 1,
-      "scenarioIds": ["ai-resume-tool-review"],
-      "modelIds": ["deepseek"],
+      "scenarioIds": [
+        "ai-resume-tool-review"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
       "jsonPath": "runs/runs-20251102071347.json",
       "csvPath": "runs/runs-20251102071347.csv"
     }
