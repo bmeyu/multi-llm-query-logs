@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Multi-LLM Query · 调度结果</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <div>
+        <h1>Multi-LLM Query</h1>
+        <p>最新的定时运行结果（实时同步自 runs/index.json）</p>
+      </div>
+      <button id="refresh-btn" type="button">刷新</button>
+    </header>
+
+    <main>
+      <section class="filters">
+        <label>
+          任务
+          <select id="schedule-filter">
+            <option value="all">全部</option>
+          </select>
+        </label>
+        <label>
+          模型
+          <select id="model-filter">
+            <option value="all">全部</option>
+          </select>
+        </label>
+        <label>
+          场景
+          <select id="scenario-filter">
+            <option value="all">全部</option>
+          </select>
+        </label>
+      </section>
+
+      <section id="log-container" class="log-container">
+        <div class="empty">正在加载...</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        部署指引：将 <code>runs/index.json</code> 与本目录一起发布到 GitHub Pages 或任意静态托管平台即可。
+      </p>
+      <p>若页面无法加载，请确认 <code>index.json</code> 可通过相对路径访问。</p>
+    </footer>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
+

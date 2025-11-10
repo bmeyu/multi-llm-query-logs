@@ -1,0 +1,157 @@
+:root {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+  background-color: #f9fafb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header.banner {
+  padding: 1.5rem 2rem;
+  background: linear-gradient(90deg, #0ea5e9, #2563eb);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header.banner h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header.banner button {
+  border: none;
+  background: white;
+  color: #2563eb;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.15s ease-in-out;
+}
+
+header.banner button:hover {
+  opacity: 0.85;
+}
+
+main {
+  flex: 1;
+  width: min(1100px, 100%);
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.filters label {
+  font-size: 0.85rem;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filters select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background: white;
+}
+
+.log-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.log-card {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.log-card h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.log-card .meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.log-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.log-card a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.log-card a:hover {
+  text-decoration: underline;
+}
+
+.badge {
+  align-self: flex-start;
+  background: #e0f2fe;
+  color: #0369a1;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.75rem;
+  color: #6b7280;
+}
+
+footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+footer code {
+  background: #e5e7eb;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
