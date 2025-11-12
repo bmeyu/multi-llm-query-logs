@@ -155,3 +155,97 @@ footer code {
   border-radius: 0.25rem;
   font-size: 0.8rem;
 }
+
+.keyword-section {
+  border-top: 1px dashed #e5e7eb;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.keyword-loading,
+.keyword-error,
+.keyword-empty {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.keyword-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.badge-hit,
+.badge-miss,
+.chip-hit,
+.chip-miss {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-hit,
+.chip-hit {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge-miss,
+.chip-miss {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.keyword-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.keyword-step {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  background: #f9fafb;
+}
+
+.keyword-step-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.keyword-step-header .step-id {
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+
+.keyword-step-header .step-adapter {
+  color: #6b7280;
+}
+
+.keyword-step-body {
+  font-size: 0.8rem;
+  color: #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.keyword-step-body .text-hit {
+  color: #15803d;
+}
+
+.keyword-step-body .text-miss {
+  color: #b91c1c;
+}
