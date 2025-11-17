@@ -14,6 +14,7 @@ let resumeQuestions = []
 const RESUME_SCENE_ID = "ai-resume-tool-review"
 const RESUME_SUMMARY_STEP_ID = "ai-resume-11"
 const SITE_DICT_PATH = "./runs/site-dictionary.json"
+const QUESTIONS_PATH = "./resume-questions.json"
 
 refreshBtn.addEventListener("click", () => loadIndex(true))
 scheduleFilter.addEventListener("change", renderEntries)
@@ -32,7 +33,7 @@ async function loadIndex(force) {
     }
     const payload = await response.json()
     entries = payload.entries ?? []
-    resumeQuestions = payload.resumeQuestions ?? []
+    await ensureQuestions()
     hydrateFilters(entries)
     renderEntries()
     renderTodaySummary(entries).catch((error) => {
@@ -420,6 +421,23 @@ function renderAggregateStats(stats) {
   container.appendChild(totalCard)
   container.appendChild(zhijianCard)
   return container
+}
+
+async function ensureQuestions() {
+  if (resumeQuestions.length) return
+  try {
+    const response = await fetch(`${QUESTIONS_PATH}?t=${Date.now()}`)
+    if (!response.ok) {
+      throw new Error("failed to load resume questions")
+    }
+    const data = await response.json()
+    if (Array.isArray(data)) {
+      resumeQuestions = data
+    }
+  } catch (error) {
+    console.warn("加载问题列表失败", error)
+    resumeQuestions = []
+  }
 }
 
 function renderEntries() {
