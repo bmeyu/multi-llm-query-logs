@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2025-11-17T06:51:01.582Z",
+  "sites": [
+    {
+      "site": "wondercv.com",
+      "count": 3,
+      "questions": {
+        "step-01": 3
+      },
+      "domains": {
+        "www.wondercv.com": 3
+      }
+    },
+    {
+      "site": "kickresume.com",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "www.kickresume.com": 2
+      }
+    },
+    {
+      "site": "rezi.ai",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "www.rezi.ai": 2
+      }
+    },
+    {
+      "site": "resumeworded.com",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "www.resumeworded.com": 1,
+        "resumeworded.com": 1
+      }
+    },
+    {
+      "site": "flowcv.com",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "flowcv.com": 2
+      }
+    },
+    {
+      "site": "enhancv.com",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "enhancv.com": 2
+      }
+    },
+    {
+      "site": "zhaopin.com",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "www.zhaopin.com": 2
+      }
+    },
+    {
+      "site": "magicv.art",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "magicv.art": 2
+      }
+    },
+    {
+      "site": "upcv.cn",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.upcv.cn": 1
+      }
+    },
+    {
+      "site": "52cv.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.52cv.com": 1
+      }
+    },
+    {
+      "site": "upcv.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.upcv.com": 1
+      }
+    },
+    {
+      "site": "resume.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.resume.com": 1
+      }
+    },
+    {
+      "site": "github.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "github.com": 1
+      }
+    },
+    {
+      "site": "offerdow.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.offerdow.com": 1
+      }
+    },
+    {
+      "site": "wktline.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.wktline.com": 1
+      }
+    },
+    {
+      "site": "ailookme.com",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "www.ailookme.com": 1
+      }
+    },
+    {
+      "site": "upcv.tech",
+      "count": 1,
+      "questions": {
+        "step-01": 1
+      },
+      "domains": {
+        "upcv.tech": 1
+      }
+    }
+  ]
+}
