@@ -6,6 +6,7 @@ const modelFilter = document.getElementById("model-filter")
 const scenarioFilter = document.getElementById("scenario-filter")
 const todaySummaryContainer = document.getElementById("today-summary")
 const summaryHistoryContainer = document.getElementById("summary-history")
+const siteImpactContainer = document.getElementById("site-impact")
 
 let entries = []
 const runDetailCache = new Map()
@@ -13,6 +14,7 @@ const runDetailCache = new Map()
 const RESUME_SCENE_ID = "ai-resume-tool-review"
 const RESUME_SUMMARY_STEP_ID = "ai-resume-11"
 const SUMMARY_HISTORY_LIMIT = 5
+const SITE_DICT_PATH = "./runs/site-dictionary.json"
 
 refreshBtn.addEventListener("click", () => loadIndex(true))
 scheduleFilter.addEventListener("change", renderEntries)
@@ -36,10 +38,78 @@ async function loadIndex(force) {
     renderTodaySummary(entries).catch((error) => {
       console.error(error)
     })
+    renderSiteImpact().catch((error) => {
+      console.error(error)
+    })
   } catch (error) {
     console.error(error)
     setStatus("加载失败，请稍后重试。")
   }
+}
+
+async function renderSiteImpact() {
+  if (!siteImpactContainer) return
+  siteImpactContainer.innerHTML =
+    '<div class="empty">正在加载站点统计...</div>'
+  try {
+    const response = await fetch(`${SITE_DICT_PATH}?t=${Date.now()}`)
+    if (!response.ok) {
+      throw new Error(`加载 site-dictionary 失败：${response.status}`)
+    }
+    const payload = await response.json()
+    const sites = Array.isArray(payload?.sites) ? payload.sites : []
+    if (!sites.length) {
+      siteImpactContainer.innerHTML =
+        '<div class="empty">暂无站点统计。</div>'
+      return
+    }
+    const topSites = sites.slice(0, 5)
+    siteImpactContainer.innerHTML = ""
+    siteImpactContainer.appendChild(buildImpactChart(topSites))
+  } catch (error) {
+    console.error(error)
+    siteImpactContainer.innerHTML =
+      '<div class="empty">无法加载站点统计。</div>'
+  }
+}
+
+function buildImpactChart(sites) {
+  const wrapper = document.createElement("div")
+  wrapper.className = "impact-chart"
+  const maxCount = sites.reduce(
+    (max, item) => Math.max(max, item.count || 0),
+    1,
+  )
+
+  sites.forEach((site) => {
+    const row = document.createElement("div")
+    row.className = "impact-row"
+
+    const header = document.createElement("header")
+    header.innerHTML = `<strong>${site.site}</strong><span>${site.count ?? 0} 次</span>`
+
+    const track = document.createElement("div")
+    track.className = "impact-bar-track"
+    const fill = document.createElement("div")
+    fill.className = "impact-bar-fill"
+    const width =
+      maxCount > 0 ? Math.max((site.count / maxCount) * 100, 6) : 0
+    fill.style.width = `${Math.min(width, 100)}%`
+    track.appendChild(fill)
+
+    const footer = document.createElement("footer")
+    const questionIds = Object.keys(site.questions ?? {})
+    footer.textContent = questionIds.length
+      ? `涉及问题：${questionIds.join(", ")}`
+      : "涉及问题：—"
+
+    row.appendChild(header)
+    row.appendChild(track)
+    row.appendChild(footer)
+    wrapper.appendChild(row)
+  })
+
+  return wrapper
 }
 
 function hydrateFilters(list) {

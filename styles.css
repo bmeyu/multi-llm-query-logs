@@ -255,6 +255,44 @@ main {
   padding-top: 0.75rem;
 }
 
+.impact-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.impact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.impact-row header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.impact-bar-track {
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.impact-bar-fill {
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+  height: 100%;
+  border-radius: 999px;
+}
+
+.impact-row footer {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
 .log-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
