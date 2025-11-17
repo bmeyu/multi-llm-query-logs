@@ -1,6 +1,38 @@
 {
   "entries": [
     {
+      "id": "20251117011608",
+      "createdAt": "2025-11-17T01:16:08.066Z",
+      "source": "schedule",
+      "runCount": 1,
+      "scenarioIds": [
+        "ai-resume-tool-review"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
+      "scheduleId": "daily-resume",
+      "scheduleName": "每日简历",
+      "jsonPath": "runs/runs-20251117011608.json",
+      "csvPath": "runs/runs-20251117011608.csv"
+    },
+    {
+      "id": "20251116082203",
+      "createdAt": "2025-11-16T08:22:03.504Z",
+      "source": "schedule",
+      "runCount": 1,
+      "scenarioIds": [
+        "ai-resume-tool-review"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
+      "scheduleId": "daily-resume",
+      "scheduleName": "每日简历",
+      "jsonPath": "runs/runs-20251116082203.json",
+      "csvPath": "runs/runs-20251116082203.csv"
+    },
+    {
       "id": "20251116011113",
       "createdAt": "2025-11-16T01:11:13.529Z",
       "source": "schedule",
