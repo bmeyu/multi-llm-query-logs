@@ -9,6 +9,7 @@ const siteImpactContainer = document.getElementById("site-impact")
 
 let entries = []
 const runDetailCache = new Map()
+let resumeQuestions = []
 
 const RESUME_SCENE_ID = "ai-resume-tool-review"
 const RESUME_SUMMARY_STEP_ID = "ai-resume-11"
@@ -31,6 +32,7 @@ async function loadIndex(force) {
     }
     const payload = await response.json()
     entries = payload.entries ?? []
+    resumeQuestions = payload.resumeQuestions ?? []
     hydrateFilters(entries)
     renderEntries()
     renderTodaySummary(entries).catch((error) => {
@@ -199,6 +201,7 @@ function buildTodaySummaryCard(entry, summaryInfo, detail) {
   card.appendChild(renderAggregateStats(aggregate))
 
   card.appendChild(renderSummaryContent(summaryInfo))
+  card.appendChild(renderDailyQuestionList(detail))
 
   const keywordWrapper = document.createElement("div")
   keywordWrapper.className = "summary-keywords"
@@ -607,6 +610,43 @@ function buildKeywordSummary(detail) {
 
   fragment.appendChild(list)
   return fragment
+}
+
+function renderDailyQuestionList(detail) {
+  const container = document.createElement("div")
+  container.className = "summary-keywords"
+  const runs = Array.isArray(detail?.runs) ? detail.runs : []
+  const entries = []
+
+  runs.forEach((run) => {
+    run?.result?.steps?.forEach((step) => {
+      if (!step.stepId) return
+      entries.push({
+        stepId: step.stepId,
+        status: step.status,
+        response: step.responseText || "",
+      })
+    })
+  })
+
+  if (!entries.length || !resumeQuestions.length) {
+    return container
+  }
+
+  const list = document.createElement("ul")
+  list.className = "question-list"
+
+  resumeQuestions.forEach((question) => {
+    const data = entries.find((item) => item.stepId === question.id)
+    const li = document.createElement("li")
+    li.innerHTML = `<div class="question-title">${question.prompt}</div>
+      <div class="question-answer">${data?.response || "（暂无回答）"}</div>`
+    list.appendChild(li)
+  })
+
+  container.innerHTML = `<h4>今日回答（全部问题）</h4>`
+  container.appendChild(list)
+  return container
 }
 
 function formatKeywordList(list) {
