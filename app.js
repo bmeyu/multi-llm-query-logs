@@ -655,10 +655,8 @@ function renderDailyQuestionList(detail) {
   list.className = "question-list"
 
   resumeQuestions.forEach((question) => {
-    const data = entries.find((item) => item.stepId === question.id)
     const li = document.createElement("li")
-    li.innerHTML = `<div class="question-title">${question.prompt}</div>
-      <div class="question-answer">${data?.response || "（暂无回答）"}</div>`
+    li.innerHTML = `<div class="question-title">${question.prompt}</div>`
     list.appendChild(li)
   })
 
