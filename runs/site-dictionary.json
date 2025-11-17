@@ -1,175 +1,405 @@
 {
-  "generatedAt": "2025-11-17T06:51:01.582Z",
+  "generatedAt": "2025-11-17T09:50:05.304Z",
   "sites": [
     {
-      "site": "wondercv.com",
-      "count": 3,
+      "id": "zhilian",
+      "site": "智联招聘 AI 简历优化",
+      "count": 92,
       "questions": {
-        "step-01": 3
+        "step-01": 7,
+        "ai-resume-01": 13,
+        "ai-resume-02": 13,
+        "ai-resume-03": 3,
+        "ai-resume-04": 12,
+        "ai-resume-05": 6,
+        "ai-resume-06": 5,
+        "ai-resume-07": 8,
+        "ai-resume-08": 7,
+        "ai-resume-09": 8,
+        "ai-resume-10": 7,
+        "ai-resume-11": 3
       },
       "domains": {
-        "www.wondercv.com": 3
+        "zhaopin.com": 2
       }
     },
     {
-      "site": "kickresume.com",
-      "count": 2,
+      "id": "zhitu",
+      "site": "职徒简历",
+      "count": 70,
       "questions": {
-        "step-01": 2
+        "step-01": 7,
+        "ai-resume-01": 8,
+        "ai-resume-02": 13,
+        "ai-resume-03": 3,
+        "ai-resume-04": 9,
+        "ai-resume-05": 4,
+        "ai-resume-06": 4,
+        "ai-resume-07": 7,
+        "ai-resume-08": 3,
+        "ai-resume-09": 6,
+        "ai-resume-10": 5,
+        "ai-resume-11": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "wondercv",
+      "site": "超级简历 (WonderCV)",
+      "count": 53,
+      "questions": {
+        "step-01": 7,
+        "ai-resume-01": 12,
+        "ai-resume-02": 11,
+        "ai-resume-03": 2,
+        "ai-resume-04": 4,
+        "ai-resume-05": 2,
+        "ai-resume-06": 2,
+        "ai-resume-07": 3,
+        "ai-resume-08": 4,
+        "ai-resume-09": 3,
+        "ai-resume-10": 2,
+        "ai-resume-11": 1
       },
       "domains": {
-        "www.kickresume.com": 2
+        "wondercv.com": 3
       }
     },
     {
-      "site": "rezi.ai",
-      "count": 2,
+      "id": "chatgpt",
+      "site": "ChatGPT",
+      "count": 27,
       "questions": {
-        "step-01": 2
+        "ai-resume-02": 11,
+        "ai-resume-04": 2,
+        "ai-resume-09": 6,
+        "ai-resume-06": 2,
+        "ai-resume-07": 2,
+        "ai-resume-05": 1,
+        "ai-resume-10": 2,
+        "ai-resume-11": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "offergoose",
+      "site": "鹅来面 (OfferGoose)",
+      "count": 23,
+      "questions": {
+        "ai-resume-01": 7,
+        "ai-resume-09": 4,
+        "ai-resume-10": 2,
+        "ai-resume-04": 4,
+        "ai-resume-05": 1,
+        "ai-resume-08": 1,
+        "ai-resume-03": 1,
+        "ai-resume-11": 3
+      },
+      "domains": {}
+    },
+    {
+      "id": "reactiveresume",
+      "site": "Reactive Resume",
+      "count": 20,
+      "questions": {
+        "step-01": 2,
+        "ai-resume-03": 11,
+        "ai-resume-10": 4,
+        "ai-resume-01": 1,
+        "ai-resume-02": 1,
+        "ai-resume-11": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "rezi",
+      "site": "Rezi.ai",
+      "count": 19,
+      "questions": {
+        "step-01": 2,
+        "ai-resume-01": 4,
+        "ai-resume-02": 1,
+        "ai-resume-03": 2,
+        "ai-resume-04": 2,
+        "ai-resume-05": 1,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1,
+        "ai-resume-09": 1,
+        "ai-resume-10": 1,
+        "ai-resume-11": 3
       },
       "domains": {
-        "www.rezi.ai": 2
+        "rezi.ai": 2
       }
     },
     {
-      "site": "resumeworded.com",
-      "count": 2,
+      "id": "kimi",
+      "site": "Kimi 智能助手",
+      "count": 19,
       "questions": {
-        "step-01": 2
+        "ai-resume-09": 2,
+        "ai-resume-01": 5,
+        "ai-resume-03": 4,
+        "ai-resume-04": 3,
+        "ai-resume-05": 1,
+        "ai-resume-08": 1,
+        "ai-resume-10": 1,
+        "ai-resume-11": 2
       },
-      "domains": {
-        "www.resumeworded.com": 1,
-        "resumeworded.com": 1
-      }
+      "domains": {}
     },
     {
-      "site": "flowcv.com",
-      "count": 2,
+      "id": "job104",
+      "site": "104 人力银行",
+      "count": 16,
       "questions": {
-        "step-01": 2
+        "ai-resume-01": 3,
+        "ai-resume-05": 6,
+        "ai-resume-02": 1,
+        "ai-resume-03": 1,
+        "ai-resume-04": 3,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1
       },
-      "domains": {
-        "flowcv.com": 2
-      }
+      "domains": {}
     },
     {
-      "site": "enhancv.com",
-      "count": 2,
+      "id": "canva",
+      "site": "Canva",
+      "count": 14,
       "questions": {
-        "step-01": 2
+        "step-01": 1,
+        "ai-resume-02": 8,
+        "ai-resume-03": 5
       },
-      "domains": {
-        "enhancv.com": 2
-      }
+      "domains": {}
     },
     {
-      "site": "zhaopin.com",
-      "count": 2,
+      "id": "mofang",
+      "site": "魔方简历",
+      "count": 11,
       "questions": {
-        "step-01": 2
-      },
-      "domains": {
-        "www.zhaopin.com": 2
-      }
-    },
-    {
-      "site": "magicv.art",
-      "count": 2,
-      "questions": {
-        "step-01": 2
+        "step-01": 3,
+        "ai-resume-10": 5,
+        "ai-resume-03": 1,
+        "ai-resume-08": 1,
+        "ai-resume-09": 1
       },
       "domains": {
         "magicv.art": 2
       }
     },
     {
-      "site": "upcv.cn",
-      "count": 1,
+      "id": "cvwizard",
+      "site": "CVwizard",
+      "count": 11,
       "questions": {
-        "step-01": 1
+        "ai-resume-01": 1,
+        "ai-resume-02": 1,
+        "ai-resume-03": 2,
+        "ai-resume-04": 1,
+        "ai-resume-05": 1,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1,
+        "ai-resume-08": 1,
+        "ai-resume-09": 1,
+        "ai-resume-10": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "resumematcher",
+      "site": "Resume Matcher",
+      "count": 10,
+      "questions": {
+        "ai-resume-06": 3,
+        "ai-resume-03": 1,
+        "ai-resume-09": 3,
+        "ai-resume-10": 2,
+        "ai-resume-11": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "sousouoffer",
+      "site": "搜搜Offer",
+      "count": 10,
+      "questions": {
+        "ai-resume-05": 5,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1,
+        "ai-resume-08": 1,
+        "ai-resume-09": 1,
+        "ai-resume-10": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "yucaihui",
+      "site": "渝才荟",
+      "count": 10,
+      "questions": {
+        "ai-resume-05": 5,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1,
+        "ai-resume-08": 1,
+        "ai-resume-09": 1,
+        "ai-resume-10": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "jianlidoctor",
+      "site": "简历医生",
+      "count": 8,
+      "questions": {
+        "ai-resume-02": 3,
+        "ai-resume-07": 2,
+        "ai-resume-01": 1,
+        "ai-resume-04": 1,
+        "ai-resume-05": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "flowcv",
+      "site": "FlowCV",
+      "count": 7,
+      "questions": {
+        "step-01": 2,
+        "ai-resume-03": 5
       },
       "domains": {
-        "www.upcv.cn": 1
+        "flowcv.com": 2
       }
     },
     {
-      "site": "52cv.com",
-      "count": 1,
+      "id": "novacv",
+      "site": "NovaCV",
+      "count": 7,
       "questions": {
-        "step-01": 1
+        "ai-resume-06": 3,
+        "ai-resume-07": 2,
+        "ai-resume-08": 1,
+        "ai-resume-09": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "resumeai",
+      "site": "ResumeAI",
+      "count": 7,
+      "questions": {
+        "ai-resume-02": 7
+      },
+      "domains": {}
+    },
+    {
+      "id": "resumecom",
+      "site": "Resume.com",
+      "count": 6,
+      "questions": {
+        "step-01": 3,
+        "ai-resume-03": 3
       },
       "domains": {
-        "www.52cv.com": 1
+        "kickresume.com": 2,
+        "resume.com": 1
       }
     },
     {
-      "site": "upcv.com",
-      "count": 1,
+      "id": "tailormyresume",
+      "site": "TailorMyResume",
+      "count": 6,
       "questions": {
-        "step-01": 1
+        "ai-resume-03": 2,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1,
+        "ai-resume-08": 1,
+        "ai-resume-09": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "codecv",
+      "site": "CodeCV",
+      "count": 5,
+      "questions": {
+        "step-01": 1,
+        "ai-resume-06": 1,
+        "ai-resume-07": 1,
+        "ai-resume-04": 2
       },
       "domains": {
-        "www.upcv.com": 1
+        "52cv.com": 1
       }
     },
     {
-      "site": "resume.com",
-      "count": 1,
+      "id": "kickresume",
+      "site": "Kickresume",
+      "count": 5,
       "questions": {
-        "step-01": 1
+        "step-01": 2,
+        "ai-resume-01": 2,
+        "ai-resume-07": 1
       },
       "domains": {
-        "www.resume.com": 1
+        "kickresume.com": 2
       }
     },
     {
-      "site": "github.com",
-      "count": 1,
+      "id": "upresume",
+      "site": "UP 简历",
+      "count": 4,
       "questions": {
-        "step-01": 1
+        "step-01": 4
       },
       "domains": {
-        "github.com": 1
-      }
-    },
-    {
-      "site": "offerdow.com",
-      "count": 1,
-      "questions": {
-        "step-01": 1
-      },
-      "domains": {
-        "www.offerdow.com": 1
-      }
-    },
-    {
-      "site": "wktline.com",
-      "count": 1,
-      "questions": {
-        "step-01": 1
-      },
-      "domains": {
-        "www.wktline.com": 1
-      }
-    },
-    {
-      "site": "ailookme.com",
-      "count": 1,
-      "questions": {
-        "step-01": 1
-      },
-      "domains": {
-        "www.ailookme.com": 1
-      }
-    },
-    {
-      "site": "upcv.tech",
-      "count": 1,
-      "questions": {
-        "step-01": 1
-      },
-      "domains": {
+        "upcv.cn": 1,
+        "upcv.com": 1,
+        "ailookme.com": 1,
         "upcv.tech": 1
+      }
+    },
+    {
+      "id": "talencat",
+      "site": "TalenCat",
+      "count": 4,
+      "questions": {
+        "ai-resume-06": 2,
+        "ai-resume-07": 1,
+        "ai-resume-09": 1
+      },
+      "domains": {}
+    },
+    {
+      "id": "grammarly",
+      "site": "Grammarly",
+      "count": 4,
+      "questions": {
+        "ai-resume-02": 4
+      },
+      "domains": {}
+    },
+    {
+      "id": "teal",
+      "site": "Teal",
+      "count": 3,
+      "questions": {
+        "ai-resume-01": 1,
+        "ai-resume-03": 2
+      },
+      "domains": {}
+    },
+    {
+      "id": "resumeworded",
+      "site": "Resume Worded",
+      "count": 2,
+      "questions": {
+        "step-01": 2
+      },
+      "domains": {
+        "resumeworded.com": 2
       }
     }
   ]
