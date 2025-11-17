@@ -4,9 +4,15 @@ const refreshBtn = document.getElementById("refresh-btn")
 const scheduleFilter = document.getElementById("schedule-filter")
 const modelFilter = document.getElementById("model-filter")
 const scenarioFilter = document.getElementById("scenario-filter")
+const todaySummaryContainer = document.getElementById("today-summary")
+const summaryHistoryContainer = document.getElementById("summary-history")
 
 let entries = []
 const runDetailCache = new Map()
+
+const RESUME_SCENE_ID = "ai-resume-tool-review"
+const RESUME_SUMMARY_STEP_ID = "ai-resume-11"
+const SUMMARY_HISTORY_LIMIT = 5
 
 refreshBtn.addEventListener("click", () => loadIndex(true))
 scheduleFilter.addEventListener("change", renderEntries)
@@ -27,6 +33,9 @@ async function loadIndex(force) {
     entries = payload.entries ?? []
     hydrateFilters(entries)
     renderEntries()
+    renderTodaySummary(entries).catch((error) => {
+      console.error(error)
+    })
   } catch (error) {
     console.error(error)
     setStatus("加载失败，请稍后重试。")
@@ -78,13 +87,320 @@ function fillSelect(select, values) {
   }
 }
 
+async function renderTodaySummary(list) {
+  if (!todaySummaryContainer || !summaryHistoryContainer) {
+    return
+  }
+  const resumeEntries = list.filter((entry) =>
+    (entry.scenarioIds || []).includes(RESUME_SCENE_ID),
+  )
+  if (!resumeEntries.length) {
+    todaySummaryContainer.innerHTML =
+      '<div class="empty">暂无「每日简历」运行。</div>'
+    summaryHistoryContainer.innerHTML =
+      '<div class="empty">暂无历史记录。</div>'
+    return
+  }
+
+  const [latest, ...history] = resumeEntries
+  todaySummaryContainer.innerHTML =
+    '<div class="empty">正在加载「每日简历」总结...</div>'
+  try {
+    const detail = await loadRunDetail(latest)
+    const summaryInfo = extractResumeSummary(detail)
+    const card = buildTodaySummaryCard(latest, summaryInfo, detail)
+    todaySummaryContainer.innerHTML = ""
+    todaySummaryContainer.appendChild(card)
+  } catch (error) {
+    console.error(error)
+    todaySummaryContainer.innerHTML =
+      '<div class="empty">加载今日总结失败。</div>'
+  }
+
+  await renderSummaryHistory(history)
+}
+
+async function renderSummaryHistory(historyList) {
+  if (!summaryHistoryContainer) return
+  const recent = historyList.slice(0, SUMMARY_HISTORY_LIMIT)
+  if (!recent.length) {
+    summaryHistoryContainer.innerHTML =
+      '<div class="empty">暂无历史记录。</div>'
+    return
+  }
+  summaryHistoryContainer.innerHTML = ""
+
+  for (const entry of recent) {
+    const card = document.createElement("article")
+    card.className = "summary-history-card"
+
+    const header = document.createElement("div")
+    header.innerHTML = `<h4>${formatDate(entry.createdAt)}</h4>`
+    const meta = document.createElement("span")
+    const jsonLink = entry.jsonPath
+      ? `<a href="${entry.jsonPath}" target="_blank" rel="noreferrer">JSON</a>`
+      : "无 JSON"
+    meta.innerHTML = `运行 ID：${entry.id} · ${jsonLink}`
+    card.appendChild(header)
+    card.appendChild(meta)
+    summaryHistoryContainer.appendChild(card)
+
+    try {
+      const detail = await loadRunDetail(entry)
+      const summaryInfo = extractResumeSummary(detail)
+      card.appendChild(renderSummaryContent(summaryInfo, { compact: true }))
+    } catch (error) {
+      console.error(error)
+      const err = document.createElement("div")
+      err.className = "keyword-error"
+      err.textContent = "加载总结失败。"
+      card.appendChild(err)
+    }
+  }
+}
+
+function buildTodaySummaryCard(entry, summaryInfo, detail) {
+  const card = document.createElement("div")
+  card.className = "summary-card"
+
+  const header = document.createElement("div")
+  header.className = "summary-card-header"
+  header.innerHTML = `<h3>${entry.scheduleName || entry.id}</h3>
+    <span>${formatDate(entry.createdAt)} · 运行 ID：${entry.id}</span>`
+  card.appendChild(header)
+
+  const aggregate = computeKeywordAggregate(detail)
+  card.appendChild(renderAggregateStats(aggregate))
+
+  card.appendChild(renderSummaryContent(summaryInfo))
+
+  const keywordWrapper = document.createElement("div")
+  keywordWrapper.className = "summary-keywords"
+  keywordWrapper.appendChild(buildKeywordSummary(detail))
+  card.appendChild(keywordWrapper)
+
+  return card
+}
+
+function renderSummaryContent(summaryInfo, options = {}) {
+  const container = document.createElement("div")
+  container.className = "summary-content"
+  if (!summaryInfo) {
+    const empty = document.createElement("div")
+    empty.className = "keyword-empty"
+    empty.textContent = "暂无第 11 问总结。"
+    container.appendChild(empty)
+    return container
+  }
+
+  if (
+    summaryInfo.structured &&
+    typeof summaryInfo.structured === "object"
+  ) {
+    container.appendChild(
+      renderStructuredSummary(summaryInfo.structured, options),
+    )
+  } else if (summaryInfo.raw) {
+    const raw = document.createElement("div")
+    raw.className = "summary-raw"
+    raw.textContent = summaryInfo.raw
+    container.appendChild(raw)
+  } else {
+    const placeholder = document.createElement("div")
+    placeholder.className = "keyword-empty"
+    placeholder.textContent = "尚未提供总结文本。"
+    container.appendChild(placeholder)
+  }
+  return container
+}
+
+function renderStructuredSummary(summary, options = {}) {
+  const fragment = document.createDocumentFragment()
+  if (Array.isArray(summary.overallInsights) && summary.overallInsights.length) {
+    const section = document.createElement("div")
+    section.className = "summary-section"
+    const title = document.createElement("h4")
+    title.textContent = "总体洞察"
+    section.appendChild(title)
+    const list = document.createElement("ul")
+    summary.overallInsights
+      .slice(0, options.compact ? 2 : summary.overallInsights.length)
+      .forEach((item) => {
+        const type = (item.type || "趋势").toUpperCase()
+        const li = document.createElement("li")
+        li.textContent = `[${type}] ${item.message || ""}`
+        list.appendChild(li)
+      })
+    section.appendChild(list)
+    fragment.appendChild(section)
+  }
+
+  if (Array.isArray(summary.siteInsights) && summary.siteInsights.length) {
+    const section = document.createElement("div")
+    section.className = "summary-section"
+    const title = document.createElement("h4")
+    title.textContent = "站点摘要"
+    section.appendChild(title)
+    const list = document.createElement("div")
+    list.className = "summary-sites"
+    summary.siteInsights
+      .slice(0, options.compact ? 2 : 4)
+      .forEach((site) => {
+        const card = document.createElement("div")
+        card.className = "summary-site-card"
+        const positioning = formatSummaryList(site.positioning)
+        const audience = formatSummaryList(site.audienceFit)
+        const highlights = formatSummaryList(site.featureHighlights)
+        card.innerHTML = `<h5>${site.site || "未命名工具"}</h5>
+          <p>提及：${site.mentions ?? 0} 次 · 受众：${audience}</p>
+          <p>定位：${positioning}</p>
+          <p>亮点：${highlights}</p>`
+        if (site.citations?.length) {
+          const cite = document.createElement("p")
+          cite.innerHTML = `引用：<a href="${site.citations[0]}" target="_blank" rel="noreferrer">${site.citations[0]}</a>`
+          card.appendChild(cite)
+        }
+        list.appendChild(card)
+      })
+    section.appendChild(list)
+    fragment.appendChild(section)
+  }
+
+  if (Array.isArray(summary.actionItems) && summary.actionItems.length) {
+    const section = document.createElement("div")
+    section.className = "summary-section"
+    const title = document.createElement("h4")
+    title.textContent = "行动项"
+    section.appendChild(title)
+    const list = document.createElement("ul")
+    summary.actionItems
+      .slice(0, options.compact ? 2 : summary.actionItems.length)
+      .forEach((item) => {
+        const li = document.createElement("li")
+        li.textContent = `${item.title || "事项"}（优先级：${
+          item.priority || "N/A"
+        }） - ${item.detail || ""}`
+        list.appendChild(li)
+      })
+    section.appendChild(list)
+    fragment.appendChild(section)
+  }
+
+  if (
+    Array.isArray(summary.questionCoverage) &&
+    summary.questionCoverage.length &&
+    !options.compact
+  ) {
+    const section = document.createElement("div")
+    section.className = "summary-section"
+    const title = document.createElement("h4")
+    title.textContent = "问题覆盖"
+    section.appendChild(title)
+    const list = document.createElement("ul")
+    summary.questionCoverage.slice(0, 5).forEach((item) => {
+      const li = document.createElement("li")
+      li.textContent = `${item.stepId}: 关键字命中率 ${
+        typeof item.keywordHitRate === "number"
+          ? Math.round(item.keywordHitRate * 100)
+          : "—"
+      }% · Top：${formatSummaryList(item.topSites)}`
+      list.appendChild(li)
+    })
+    section.appendChild(list)
+    fragment.appendChild(section)
+  }
+
+  return fragment
+}
+
+function formatSummaryList(rawValue) {
+  if (!Array.isArray(rawValue) || rawValue.length === 0) {
+    return "—"
+  }
+  return rawValue.join("、")
+}
+
+function extractResumeSummary(detail) {
+  const runs = Array.isArray(detail?.runs) ? detail.runs : []
+  for (const run of runs) {
+    if (run.scenarioId !== RESUME_SCENE_ID) continue
+    const steps = run?.result?.steps ?? []
+    const summaryStep = steps.find((step) => step.stepId === RESUME_SUMMARY_STEP_ID)
+    if (!summaryStep) {
+      continue
+    }
+    return {
+      structured: summaryStep.metadata?.resumeImpactSummary,
+      raw:
+        summaryStep.metadata?.resumeImpactSummaryRaw ||
+        summaryStep.responseText ||
+        "",
+    }
+  }
+  return null
+}
+
+function computeKeywordAggregate(detail) {
+  const stats = {
+    expected: 0,
+    hits: 0,
+    mentionsZhijian: false,
+  }
+  const runs = Array.isArray(detail?.runs) ? detail.runs : []
+  runs.forEach((run) => {
+    run?.result?.steps?.forEach((step) => {
+      const summary = step.metadata?.keywordSummary
+      if (Array.isArray(summary?.expected)) {
+        stats.expected += summary.expected.length
+      }
+      if (Array.isArray(summary?.hits)) {
+        stats.hits += summary.hits.length
+        if (
+          summary.hits.some((hit) => hit && hit.includes("智简"))
+        ) {
+          stats.mentionsZhijian = true
+        }
+      }
+      if (!stats.mentionsZhijian && step.responseText) {
+        stats.mentionsZhijian = step.responseText.includes("智简")
+      }
+    })
+  })
+  return stats
+}
+
+function renderAggregateStats(stats) {
+  const container = document.createElement("div")
+  container.className = "aggregate-stats"
+
+  const hitRate =
+    stats.expected > 0
+      ? `${Math.round((stats.hits / stats.expected) * 100)}%`
+      : "—"
+
+  const totalCard = document.createElement("div")
+  totalCard.className = "aggregate-stat"
+  totalCard.innerHTML = `<h4>关键词命中</h4><p>${stats.hits}/${stats.expected}（${hitRate}）</p>`
+
+  const zhijianCard = document.createElement("div")
+  zhijianCard.className = "aggregate-stat"
+  zhijianCard.innerHTML = `<h4>提及“智简”</h4><p>${
+    stats.mentionsZhijian ? "是" : "否"
+  }</p>`
+
+  container.appendChild(totalCard)
+  container.appendChild(zhijianCard)
+  return container
+}
+
 function renderEntries() {
-  if (!entries.length) {
+  const limitedEntries = limitEntriesByDays(entries, 3)
+  if (!limitedEntries.length) {
     setStatus("暂无运行记录。")
     return
   }
 
-  const filtered = entries.filter((entry) => {
+  const filtered = limitedEntries.filter((entry) => {
     const matchesSchedule =
       scheduleFilter.value === "all" ||
       entry.scheduleId === scheduleFilter.value
@@ -284,4 +600,21 @@ function formatDate(value) {
   } catch {
     return value
   }
+}
+
+function limitEntriesByDays(list, days) {
+  if (!Array.isArray(list) || list.length === 0) return []
+  const sorted = [...list].sort(
+    (a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0),
+  )
+  const cutoff = new Date(Date.now() - days * 24 * 60 * 60 * 1000)
+  const filtered = sorted.filter((entry) => {
+    if (!entry.createdAt) return false
+    const created = new Date(entry.createdAt)
+    return created >= cutoff
+  })
+  if (!filtered.length) {
+    return sorted.slice(0, 3)
+  }
+  return filtered.slice(0, 3)
 }

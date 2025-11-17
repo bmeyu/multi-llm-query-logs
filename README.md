@@ -7,7 +7,9 @@ This folder contains a zero-dependency static site you can deploy alongside `run
 3. Host the repo via GitHub Pages / Cloudflare Pages. The `index.html` file fetches `runs/index.json` via relative path and renders the latest entries.
 
 Controls:
-- The dropdowns filter by schedule/model/scenario.
+- The dropdowns filter by schedule/model/scenario。
+- “今日总结” 卡片会读取 `daily-resume` 最新一次运行的第 11 个问题，将大模型的纯文本总结与自动聚合的关键词统计放在醒目位置。
+- “历史影响力” 会列出最近几次自动总结，便于快速回溯。
 - `刷新` forces a re-fetch (with cache-busting query param).
 - Links in each card point directly to the JSON/CSV artifacts.
 
