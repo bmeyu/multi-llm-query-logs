@@ -5,7 +5,6 @@ const scheduleFilter = document.getElementById("schedule-filter")
 const modelFilter = document.getElementById("model-filter")
 const scenarioFilter = document.getElementById("scenario-filter")
 const todaySummaryContainer = document.getElementById("today-summary")
-const summaryHistoryContainer = document.getElementById("summary-history")
 const siteImpactContainer = document.getElementById("site-impact")
 
 let entries = []
@@ -13,7 +12,6 @@ const runDetailCache = new Map()
 
 const RESUME_SCENE_ID = "ai-resume-tool-review"
 const RESUME_SUMMARY_STEP_ID = "ai-resume-11"
-const SUMMARY_HISTORY_LIMIT = 5
 const SITE_DICT_PATH = "./runs/site-dictionary.json"
 
 refreshBtn.addEventListener("click", () => loadIndex(true))
@@ -158,7 +156,7 @@ function fillSelect(select, values) {
 }
 
 async function renderTodaySummary(list) {
-  if (!todaySummaryContainer || !summaryHistoryContainer) {
+  if (!todaySummaryContainer) {
     return
   }
   const resumeEntries = list.filter((entry) =>
@@ -167,12 +165,10 @@ async function renderTodaySummary(list) {
   if (!resumeEntries.length) {
     todaySummaryContainer.innerHTML =
       '<div class="empty">暂无「每日简历」运行。</div>'
-    summaryHistoryContainer.innerHTML =
-      '<div class="empty">暂无历史记录。</div>'
     return
   }
 
-  const [latest, ...history] = resumeEntries
+  const [latest] = resumeEntries
   todaySummaryContainer.innerHTML =
     '<div class="empty">正在加载「每日简历」总结...</div>'
   try {
@@ -187,46 +183,6 @@ async function renderTodaySummary(list) {
       '<div class="empty">加载今日总结失败。</div>'
   }
 
-  await renderSummaryHistory(history)
-}
-
-async function renderSummaryHistory(historyList) {
-  if (!summaryHistoryContainer) return
-  const recent = historyList.slice(0, SUMMARY_HISTORY_LIMIT)
-  if (!recent.length) {
-    summaryHistoryContainer.innerHTML =
-      '<div class="empty">暂无历史记录。</div>'
-    return
-  }
-  summaryHistoryContainer.innerHTML = ""
-
-  for (const entry of recent) {
-    const card = document.createElement("article")
-    card.className = "summary-history-card"
-
-    const header = document.createElement("div")
-    header.innerHTML = `<h4>${formatDate(entry.createdAt)}</h4>`
-    const meta = document.createElement("span")
-    const jsonLink = entry.jsonPath
-      ? `<a href="${entry.jsonPath}" target="_blank" rel="noreferrer">JSON</a>`
-      : "无 JSON"
-    meta.innerHTML = `运行 ID：${entry.id} · ${jsonLink}`
-    card.appendChild(header)
-    card.appendChild(meta)
-    summaryHistoryContainer.appendChild(card)
-
-    try {
-      const detail = await loadRunDetail(entry)
-      const summaryInfo = extractResumeSummary(detail)
-      card.appendChild(renderSummaryContent(summaryInfo, { compact: true }))
-    } catch (error) {
-      console.error(error)
-      const err = document.createElement("div")
-      err.className = "keyword-error"
-      err.textContent = "加载总结失败。"
-      card.appendChild(err)
-    }
-  }
 }
 
 function buildTodaySummaryCard(entry, summaryInfo, detail) {
