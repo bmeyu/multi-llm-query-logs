@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GEO 报告 · Multi-LLM Query</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <div>
+        <h1>GEO 报告</h1>
+        <p>基线与对照组最新结果（自动同步至 GitHub Pages）</p>
+      </div>
+      <a class="ghost-btn" href="../index.html">返回主面板</a>
+    </header>
+
+    <main>
+      <section class="summary-block">
+        <div>
+          <h2>最新运行概览</h2>
+          <p id="geo-meta" class="muted">正在加载...</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h3>基线 / 对照组结果</h3>
+          <p class="muted">按模型展示每个 GEO 场景的执行状态与提取域名。</p>
+        </header>
+        <div id="geo-scenarios" class="table-wrap">
+          <div class="empty">正在加载场景结果...</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <header class="card-header">
+          <h3>竞品来源链接</h3>
+          <p class="muted">来自自动汇总的 source-leads.csv，按优先级排序。</p>
+        </header>
+        <div id="geo-sources" class="table-wrap">
+          <div class="empty">正在加载来源列表...</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
