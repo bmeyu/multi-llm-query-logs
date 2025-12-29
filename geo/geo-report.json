@@ -1,6 +1,6 @@
 {
-  "createdAt": "2025-12-29T11:20:49.379Z",
-  "runId": "20251229112049",
+  "createdAt": "2025-12-29T12:05:57.752Z",
+  "runId": "20251229120557",
   "scenarios": [
     {
       "scenarioId": "viberx360-geo-baseline",
@@ -19,35 +19,37 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "搜索 SITE_NOT_INDEXED  21 个结果   SITE_NOT_INDEXED搜索词：site:viberx360.com提示信息：未找到与“site:viberx360.com”相关的网页。"
+          "preview": "搜索 SITE_NOT_INDEXED  22 个结果   SITE_NOT_INDEXED搜索词：site:viberx360.com提示信息：未找到与“site:viberx360.com”相关的任何结果。"
         },
         {
           "stepId": "viberx360-geo-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "搜索 site:viberx360.com resume builder  10 个结果   NOT_FOUND尝试过的搜索词：site:viberx360.com resume buildersite:viberx360.com 简历viberx360 resume builder"
+          "preview": "搜索 site:viberx360.com resume builder  5 个结果   NOT_FOUND尝试过的搜索词：site:viberx360.com resume buildersite:viberx360.com 简历viberx360 resume builder"
         },
         {
           "stepId": "viberx360-geo-03",
           "status": "success",
           "extractedUrls": [
-            "https://www.mergeek.com/latest/az5PdmOrDy5WZ6BO无需注册",
-            "https://www.resumemaker.online无需注册",
-            "https://chatgate.ai/zh/post/private-resume-builder-create-resumes-offline-no-signup/无需注册",
-            "https://www.zhanid.com/daohang/magicv-art.html无需注册",
-            "https://juejin.cn/post/7508149664815153203（介绍页）无需注册",
-            "https://www.waytoagi.com/zh/question/96382（介绍页）需要注册"
+            "https://www.mergeek.com/en/latest/az5PdmOrDy5WZ6BO✅✅多语言、ATS",
+            "https://www.resumemaker.online/✅✅（付费解锁",
+            "https://chatgate.ai/zh/post/private-resume-builder-create-resumes-offline-no-signup/✅✅纯浏览器本地存储，开源",
+            "https://www.zhanid.com/daohang/magicv-art.html✅✅中文界面，免费使用，支持",
+            "https://www.rezi.ai/❌✅需注册，AI",
+            "https://www.kickresume.com/❌✅需注册，基于",
+            "https://huntr.co/❌✅需注册，含"
           ],
           "extractedDomains": [
             "www.mergeek.com",
-            "www.resumemaker.xn--online-1t2j365k4hn3j3h",
+            "www.resumemaker.online",
             "chatgate.ai",
             "www.zhanid.com",
-            "juejin.cn",
-            "www.waytoagi.com"
+            "www.rezi.ai",
+            "www.kickresume.com",
+            "huntr.co"
           ],
-          "preview": "搜索 no login ai resume builder  58 个结果   以下 8 个候选网站均来自近期搜索结果，已按“是否无需注册 / 是否支持导出 PDF”标注，并给出可直接访问的链接：Resume Yayhttps://www.mergeek.com/latest/az5PdmOrDy5WZ6BO无需注册 ✅ / 支持 PDF ✅ ResumeMaker.Onlinehttps://www.resumemaker.online无需注册 ✅ / 支持 PDF ✅（免"
+          "preview": "搜索 no login ai resume builder  43 个结果   8 个无需注册、可导出 PDF 的 AI 简历生成网站候选（按搜索结果整理）：表格  复制 序号网站/产品名官方链接无需注册支持导出 PDF备注 1ResumeYayhttps://www.mergeek.com/en/latest/az5PdmOrDy5WZ6BO✅✅多语言、ATS 友好模板，无限次 PDF 下载 2ResumeMaker.Onlinehttps://www.resumemake"
         }
       ]
     },
@@ -68,55 +70,42 @@
         {
           "stepId": "geo-control-01",
           "status": "success",
-          "extractedUrls": [],
-          "extractedDomains": [],
-          "preview": "搜索 {\n \"query\": \"请开启联网搜索并实际打开网页。先搜索：\",\n \"status\": \"SITE_NOT_INDEXED\",\n \"results\": [],\n \"notes\": \"用户指令中未提供具体搜索内容，无法生成有效搜索词。\"\n}  3 个结果   {\"query\":\"site:magicv.art\",\"status\":\"SITE_NOT_INDEXED\",\"results\":[],\"notes\":\"搜索引擎未返回任何来自 magicv.art 域名的已收录"
+          "extractedUrls": [
+            "https://magicv.art",
+            "https://magicv.art/gallery",
+            "https://magicv.art/create"
+          ],
+          "extractedDomains": [
+            "magicv.art"
+          ],
+          "preview": "搜索 {\n \"query\": \"请开启联网搜索并实际打开网页。先搜索：\",\n \"status\": \"SITE_NOT_INDEXED\",\n \"results\": [],\n \"notes\": \"用户指令中未提供具体搜索内容，无法生成有效搜索词，且未  4 个结果   {\n\"query\": \"site:magicv.art\",\n\"status\": \"ok\",\n\"results\": [\n{\n\"url\": \"https://magicv.art\",\n\"title\": \"MagicV."
         },
         {
           "stepId": "geo-control-02",
           "status": "success",
           "extractedUrls": [
-            "https://www.yjpoo.com/site/5400.html",
-            "https://lazycat.cloud/playground/guideline/1099",
-            "https://post.smzdm.com/p/axd8z509",
-            "https://www.codefather.cn/essay/1887067695402778625",
-            "https://zhuanlan.zhihu.com/p/28268365209",
-            "https://blog.qnloft.com/posts/简历工具软件横评/",
-            "https://autoppt.com/zh/blog/best-ai-resume-generators/",
-            "https://unifuncs.com/s/x3Viu6Nf"
+            "http://mp.weixin.qq.com/s?__biz=Mzg2ODk3OTM1NQ==&mid=2247485004&idx=1&sn=537a27504dfefd9212b68b20c2b8d84a",
+            "https://cbamls.github.io/AI_Tutorial/",
+            "https://podcasts.apple.com/us/podcast/alchemize-your-anger-and-anxiety-suleika-jaouad/id1087147821?i=1000706327625",
+            "https://podcasts.apple.com/us/podcast/suzanne-osullivan-on-over-diagnosis/id1345682353?i=1000696086199"
           ],
           "extractedDomains": [
-            "www.yjpoo.com",
-            "lazycat.cloud",
-            "post.smzdm.com",
-            "www.codefather.cn",
-            "zhuanlan.zhihu.com",
-            "blog.qnloft.com",
-            "autoppt.com",
-            "unifuncs.com"
+            "mp.weixin.qq.com",
+            "cbamls.github.io",
+            "podcasts.apple.com"
           ],
-          "preview": "搜索 {\"query\":\"魔方简历 评测  22 个结果   {\"query\":\"魔方简历 评测 / 推荐 / 收录 / 怎么样 magicv 简历 评测\",\"status\":\"ok\",\"results\":[{\"url\":\"https://www.yjpoo.com/site/5400.html\",\"title\":\"魔方简历:免费简历生成工具\",\"sourceType\":\"review\",\"summary\":\"映技派认为魔方简历隐私至上、AI润色强大、设计自由且完全开源，PD"
+          "preview": "搜索 magicv 简历 评测\",\n \"status\": \"NO_THIRD_PARTY\",\n \"results\": [],\n \"notes\": \"未找到第三方来源信息，搜索结果为空。\"\n}  10 个结果   {\n\"query\": \"魔方简历 评测 推荐 收录 怎么样\",\n\"status\": \"ok\",\n\"results\": [\n{\n\"url\": \"http://mp.weixin.qq.com/s?__biz=Mzg2ODk3OTM1NQ==&mid=2247485004"
         },
         {
           "stepId": "geo-control-03",
           "status": "success",
           "extractedUrls": [
-            "https://www.capterra.com/resume-builder-software.html",
-            "https://aichief.com/ai-resume-builder/magic-resume-ai/",
-            "https://www.magiccv.ai/",
-            "https://aistartupsandtools.com/products/magicresumeai-effortless-cv-builder",
-            "https://www.magicalresume.com/",
-            "https://www.livecareer.co.uk/cv/best-ai-cv-builder"
+            "https://www.pcmag.com/reviews/resume-builder-software"
           ],
           "extractedDomains": [
-            "www.capterra.com",
-            "aichief.com",
-            "www.magiccv.ai",
-            "aistartupsandtools.com",
-            "www.magicalresume.com",
-            "www.livecareer.co.uk"
+            "www.pcmag.com"
           ],
-          "preview": "搜索 {\"query\":\"magicv resume builder review / alternative / directory\",\"status\":\"ok\",\"results\":[{\"url\":\"https://www.capterra.com/resume-builder-software.html\",\"title\":\"Top 10 Resume Builder Software in 2025 - Capterra\",\"sourceType\":\"directory"
+          "preview": "搜索 {\n \"query\": \"magicv resume builder review alternative directory\",\n \"status\": \"ok\",\n \"results\": [\n {\n \"url\": \"https://www.pcmag.com/reviews/resume-builder-software\",\n \"title\": \"Best Resume Builder Software of 2025: Reviews and Comparisons"
         }
       ]
     },
@@ -139,38 +128,53 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "搜索 {\n \"query\": \"请开启联网搜索并实际打开网页。先搜索：\",\n \"status\": \"SITE_NOT_INDEXED\",\n \"results\": [],\n \"notes\": \"用户指令中未提供明确搜索主题，无法生成有效搜索词。\"\n}  2 个结果   {\"query\":\"site:upcv.tech\",\"status\":\"SITE_NOT_INDEXED\",\"results\":[],\"notes\":\"未能在公开索引中找到 upcv.tech 的任何页面，该域名"
+          "preview": "搜索 {\n \"query\": \"请开启联网搜索并实际打开网页。\",\n \"status\": \"SITE_NOT_INDEXED\",\n \"results\": [],\n \"notes\": \"该查询为指令性语句，未提供有效搜索主题，无法生成有效搜索词。\"  6 个结果   {\"query\":\"site:upcv.tech\",\"status\":\"SITE_NOT_INDEXED\",\"results\":[],\"notes\":\"搜索引擎未收录 upcv.tech 域名下的任何页面，故无结果"
         },
         {
           "stepId": "geo-control-upcv-02",
           "status": "success",
           "extractedUrls": [
-            "https://www.zhihu.com/question/645792873",
-            "http://mp.weixin.qq.com/s?__biz=MzUyMjY2MjY0Nw==&mid=2247491166&idx=3&sn=85f31d425e2674cbd4786154953547eb",
-            "https://www.xiaoyuzhoufm.com/episode/684619c8cdecf72d4c411c62",
-            "https://www.xiaoyuzhoufm.com/episode/601285227d40b2e0e3f254b8",
-            "https://www.xiaoyuzhoufm.com/episode/5f4c8a089504bbdb7712c3e4",
-            "http://mp.weixin.qq.com/s?__biz=MzkzMjQ5ODk1OQ==&mid=2247494891&idx=8&sn=a67988d25cc8c59cfc14b6c8021b3e72",
-            "https://www.xiaoyuzhoufm.com/episode/6857d9992a38b4d979e7682f",
-            "https://www.xiaoyuzhoufm.com/episode/66c20071db5e6d6bf92d3380"
+            "https://aishenqi.net/tool/upjianli",
+            "https://aisharenet.com/tools/upjianli.html",
+            "https://www.aigc.cn/up-cv",
+            "https://www.aihub.cn/tools/hr/upcv/",
+            "https://hmwww.cn/site/3530.html",
+            "https://www.xue8nav.com/sites/4159.html",
+            "https://gongke.net/tools/upcv",
+            "http://mp.weixin.qq.com/s?__biz=Mzg4NDkzMDk1Nw==&mid=2247490679&idx=1&sn=40721fa1ac8b688215e790afef6d104b"
           ],
           "extractedDomains": [
-            "www.zhihu.com",
-            "mp.weixin.qq.com",
-            "www.xiaoyuzhoufm.com"
+            "aishenqi.net",
+            "aisharenet.com",
+            "www.aigc.cn",
+            "www.aihub.cn",
+            "hmwww.cn",
+            "www.xue8nav.com",
+            "gongke.net",
+            "mp.weixin.qq.com"
           ],
-          "preview": "搜索 up 简历 评测\",\"status\":\"ok\",\"results\":[{\"url\":\"https://www.zhihu.com/question/645792873\",\"title\":\"UP简历怎么样？UP简历靠谱吗？\",\"sourceType\":\"community\",\"summary\":\"UP简历是一个专注于大学生简历制作与求  18 个结果   {\"query\":\"up 简历 评测\",\"status\":\"ok\",\"results\":[{\"url\":\"https:"
+          "preview": "搜索 {\"query\":\"up 简历 评测  20 个结果   {\"query\":\"up 简历 评测\",\"status\":\"ok\",\"results\":[{\"url\":\"https://aishenqi.net/tool/upjianli\",\"title\":\"UP简历\",\"sourceType\":\"review\",\"summary\":\"UP简历是一款AI简历工具，通过对话式交互3分钟生成专业简历，提供AI润色、JD匹配、海量模板等功能，核心功能永久免费。\"},{\"url\":\""
         },
         {
           "stepId": "geo-control-upcv-03",
           "status": "success",
           "extractedUrls": [
-            "https://www.linkedin.com/pulse/ultimate-guide-resume-building-tools-john-doe"
+            "https://www.reviewspark.com/upcv-resume-builder-review",
+            "https://www.aibase.com/zh/tool/www.aibase.com/zh/tool/35806",
+            "https://topaihubs.com/tag/ai-tool",
+            "https://www.freelancer.com/jobs/google-ads",
+            "http://sohu.com/a/911873749_120389158",
+            "https://theresanaiforthat.com/s/ai+job+search/"
           ],
           "extractedDomains": [
-            "www.linkedin.com"
+            "www.reviewspark.com",
+            "www.aibase.com",
+            "topaihubs.com",
+            "www.freelancer.com",
+            "sohu.com",
+            "theresanaiforthat.com"
           ],
-          "preview": "搜索 {\"query\":\"upcv resume builder review alternative directory\",\"status\":\"ok\",\"results\":[{\"url\":\"https://www.linkedin.com/pulse/ultimate-guide-resume-building-tools-john-doe\",\"title\":\"The Ultimate Guide to Resume Building Tools 2025\",\"source"
+          "preview": "搜索 {\"query\":\"upcv resume builder review alternative directory\",\"status\":\"ok\",\"results\":[{\"url\":\"https://www.reviewspark.com/upcv-resume-builder-review\",\"title\":\"UPCV Resume Builder Review: Is It Worth It?\",\"sourceType\":\"review\",\"summary\":\"T"
         }
       ]
     },
@@ -193,37 +197,26 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "搜索 SITE_NOT_INDEXED  6 个结果   SITE_NOT_INDEXED搜索词：site:aijianli.cn提示信息：搜索结果为 0，未找到任何来自 aijianli.cn 域名的页面。"
+          "preview": "搜索 SITE_NOT_INDEXED  6 个结果   SITE_NOT_INDEXED搜索词：site:aijianli.cn提示信息：未找到与该站点相关的任何结果，搜索引擎返回 0 条记录。"
         },
         {
           "stepId": "geo-control-aijianli-02",
           "status": "success",
           "extractedUrls": [
-            "https://aijianli.cn/faq"
+            "https://aijianli.cn/faq",
+            "https://aijianli.cn/"
           ],
           "extractedDomains": [
             "aijianli.cn"
           ],
-          "preview": "搜索 site:aijianli.cn 简历  26 个结果   已找到 aijianli.cn 官方页面，并实际打开 2 个 URL 获取信息，结论如下（均来自 aijianli.cn 域名页面）：它是做什么的？智简简历是一款“完全免费的在线 AI 简历制作平台”，主打“AI 智能生成简历、AI 简历诊断、200+ 精美模板、免费导出 PDF/图片/Markdown”。3 个核心功能AI 智能生成简历：输入基本信息后一键生成专业简历。200+ 精美模板：覆盖各行业的可视化模"
+          "preview": "搜索 site:aijianli.cn 简历  23 个结果   已找到 aijianli.cn 官方页面并实际打开，信息如下：它是做什么的智简简历（aijianli.cn）是一款完全免费的在线 AI 简历制作平台，帮助用户快速生成、排版并导出专业简历 。3 个核心功能AI 智能生成简历：输入基本信息后一键生成符合行业标准的简历 。200+ 精美模板：覆盖不同风格与行业需求，可实时预览并切换 。AI 简历诊断：自动分析岗位需求，给出内容优化建议，提高通过率 。是否需要注册网页"
         },
         {
           "stepId": "geo-control-aijianli-03",
           "status": "success",
-          "extractedUrls": [
-            "https://91wink.com/ai简历一键生成专业简历让求职更高效摘要：文章称智简简历“完全免费”，可“一键生成符合",
-            "https://pidoutv.com/sites/32416.html摘要：平台被描述为“基于人工智能技术的在线简历制作平台，支持导出",
-            "https://shenqi.io/p/5515摘要：评测总结其“三分钟完成简历制作，模板专业且全部免费”。https://www.aiheron.com/compare/7333-vs-zhijian_jianli_free_resume_template_word_tool摘要：对比文章指出智简简历“所有模板和功能均可免费使用，无付费门槛”。https://bbs.ijingyi.com/thread.html摘要：论坛回帖中用户提到“好是好，就是不会封装”，体现技术社区对其功能的讨论。https://www.tripadvisor.com/ShowUserReviews-g298555-d673755-r112228972-Jian_Li_Harmony_Hotel-Guangzhou_Guangdong.html摘要：该页面实为酒店评论，与",
-            "https://www.primescholars.com/author/jian-li摘要：同名作者页面，与",
-            "https://changxianggu.com/book/chapter/35_9787121414909.pdf摘要：PDF"
-          ],
-          "extractedDomains": [
-            "91wink.com",
-            "pidoutv.com",
-            "shenqi.io",
-            "www.primescholars.com",
-            "changxianggu.com"
-          ],
-          "preview": "搜索 aijianli.cn review  27 个结果   以下 8 条链接均为我实际打开过的第三方页面，均非 aijianli.cn 自身域名，并附一句摘要：https://91wink.com/ai简历一键生成专业简历让求职更高效摘要：文章称智简简历“完全免费”，可“一键生成符合 HR 期待的专业简历”。https://pidoutv.com/sites/32416.html摘要：平台被描述为“基于人工智能技术的在线简历制作平台，支持导出 Word 或打印”。http"
+          "extractedUrls": [],
+          "extractedDomains": [],
+          "preview": "搜索 aijianli.cn 用户反馈  23 个结果   NO_THIRD_PARTY尝试过的搜索词：aijianli.cn 评价aijianli.cn 用户反馈aijianli.cn 使用体验"
         }
       ]
     },
@@ -244,27 +237,21 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "我已尝试进行联网搜索，但遇到了以下情况：搜索词：site:viberx360.com提示信息：当前搜索失败，请稍后再试。由于网络搜索未能正常返回结果，我无法判断该网站是否被收录或结果数量。根据你设定的规则，如果搜索失败（而非结果为 0），我应反馈实际遇到的错误。当前状态：搜索失败，无法判断 SITE_NOT_INDEXED 或其他。"
+          "preview": "当前搜索请求需要通过联网功能执行，但作为AI助手，我无法直接操作浏览器或实时访问搜索引擎。不过，我可以根据常规流程指导你如何自行验证：建议操作：请打开任意搜索引擎（如Google、Bing），在搜索框中输入 site:viberx360.com 并执行搜索。预期结果判断：若显示 “没有找到匹配的结果” 或类似提示，则对应 SITE_NOT_INDEXED。若显示搜索结果，可记录前3条的标题和URL，并确认是否均属 viberx360.com 域名。注意事项：部分网站可能因区域"
         },
         {
           "stepId": "viberx360-geo-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "我尝试联网搜索了“ViberX360 resume builder”以及“viberx360 简历”，以下是搜索结果及分析：1. 搜索词：ViberX360 resume builder结果中未直接出现 viberx360.com 的官方网站。相关结果多为其他简历工具（如 resume.io、enhancv.com 等）。2. 搜索词：viberx360 简历搜索结果未找到 viberx360.com 域名下的页面。出现了一些可能无关的中文招聘或简历平台链接。由于在搜索结果中"
+          "preview": "我理解你需要我直接联网搜索并访问网页，但需要澄清的是：我目前无法主动开启联网搜索功能或实际打开网页。我是一个纯文本模型，无法执行浏览器操作或实时访问互联网。不过，根据你的需求，我可以提供以下建议帮助你自行验证：如果你愿意自行搜索和查看：搜索建议：在 Google/Bing 等搜索引擎中尝试以下关键词：ViberX360 resume builderviberx360 简历site:viberx360.com resume如果找到官网（如 viberx360.com）：打开网站"
         },
         {
           "stepId": "viberx360-geo-03",
           "status": "success",
-          "extractedUrls": [
-            "https://www.kickresume.com否是2Resume.iohttps://resume.io否是3FlowCVhttps://flowcv.io否是4Canva",
-            "https://www.canva.com/create/resumes否是5Novorésuméhttps://novoresume.com否是6Zetyhttps://zety.com否是7Resumonkhttps://www.resumonk.com否是8ResumeGiantshttps://www.resumegiants.com否是⚠️"
-          ],
-          "extractedDomains": [
-            "www.kickresume.xn--com2resume-hk6qm54o.iohttps",
-            "www.canva.com"
-          ],
-          "preview": "我已经搜索并查看了许多AI简历生成工具网站，但根据搜索结果，包含viberx360.com在内的许多网站目前都无法正常访问或查看具体内容。在能访问的网站中，我为你整理了以下8个候选网站，它们的情况如下：序号网站名称链接是否无需注册是否支持导出 PDF1Kickresumehttps://www.kickresume.com否是2Resume.iohttps://resume.io否是3FlowCVhttps://flowcv.io否是4Canva 简历制作https://ww"
+          "extractedUrls": [],
+          "extractedDomains": [],
+          "preview": "根据你的问题，我尝试通过联网搜索查找“无需注册 AI 简历生成”相关的网站，并优先访问了搜索结果中的 viberx360.com。目前，未能搜索和列出其他8个候选网站，因为在你提供的搜索结果中，viberx360.com 是其官方网站，并且符合你“无需注册”的核心要求。🌟 关于 viberx360.com (Vibe简历)该网站是一个AI简历制作平台，其核心信息整理如下：核心方面具体信息主要用途利用AI技术，帮助用户快速生成、优化专业简历，并为不同职位定制内容。核心功能1 "
         }
       ]
     },
@@ -287,21 +274,21 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n    \"query\": \"site:magicv.art\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"经过联网搜索，未能在搜索引擎中找到对域名 magicv.art 的索引结果。这可能是因为该网站较新、未被搜索引擎收录、设置了禁止爬取，或者域名当前未被使用。\"\n}"
+          "preview": "json复制下载{\n    \"query\": \"site:magicv.art\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"无法通过通用搜索引擎找到该域名的公开索引内容，站点可能未提交收录、设置了禁止抓取，或不存在。\"\n}"
         },
         {
           "stepId": "geo-control-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "{\"query\": \"魔方简历 评测 推荐 怎么样\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"经过联网搜索，无法找到关于“魔方简历”或“magicv”的第三方评测、推荐、讨论或收录信息。搜索引擎返回的结果主要指向魔方简历的官方网站（magicv.art）或与“魔方”玩具相关的内容，没有发现独立的博客、论坛、媒体或社区文章对其进行评价或讨论。这表明该产品可能较新、尚未引起广泛第三方关注，或者其推广名称（如“魔方简历”"
+          "preview": "json复制下载{\n    \"query\": \"\\\"魔方简历\\\" 评测 推荐\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"搜索结果未找到有效的、独立的第三方评测、推荐或收录页面。主要结果导向该产品的官方渠道（如官网、官方社交媒体账号、应用商店页面）或通用招聘/简历话题，不符合仅限“第三方来源”的要求。\"\n}"
         },
         {
           "stepId": "geo-control-03",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n  \"query\": \"magicv resume builder review alternative directory\",\n  \"status\": \"NO_THIRD_PARTY\",\n  \"results\": [],\n  \"notes\": \"经过联网搜索，使用英文关键词“magicv resume builder review alternative directory”进行查询，未能找到任何与Magicv相关的第三方评测、推荐或工具目录页面。搜索结"
+          "preview": "json复制下载{\n    \"query\": \"\\\"magicv resume\\\" review alternative directory\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"搜索结果未能找到关于“Magicv”或“Magic Resume”的独立第三方评测、替代方案推荐或目录收录信息。有效结果严重不足。\"\n}"
         }
       ]
     },
@@ -324,21 +311,21 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n  \"query\": \"site:upcv.tech\",\n  \"status\": \"SITE_NOT_INDEXED\",\n  \"results\": [],\n  \"notes\": \"未在搜索结果中发现该网站，域名 upcv.tech 可能未在主流搜索引擎中建立索引或未被收录。\"\n}"
+          "preview": "json复制下载{\n  \"query\": \"site:upcv.tech\",\n  \"status\": \"SITE_NOT_INDEXED\",\n  \"results\": [],\n  \"notes\": \"搜索引擎未收录或无法访问该网站。这可能是由于该站点是新网站、已关闭、设置了robots.txt禁止抓取、或未被搜索引擎索引。\"\n}"
         },
         {
           "stepId": "geo-control-upcv-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n  \"query\": \"up 简历 评测 OR 推荐 OR 收录 OR 怎么样\",\n  \"status\": \"NO_THIRD_PARTY\",\n  \"results\": [],\n  \"notes\": \"搜索了“UP简历评测”、“UP简历怎么样”等关键词，但未找到直接的第三方评测或讨论。搜索结果主要由简历制作教程、模板网站或AI简历工具（如Canva、Kickresume、Resume.io）等占据，未发现针对特定“UP简历”产品或服务的独立第三方评价文章、"
+          "preview": "{\"query\": \"up 简历 评测\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"根据当前联网搜索结果，未找到明确讨论“UP简历”（或“upcv.tech”）的第三方评测、推荐或收录文章。搜索结果主要由知乎、Bilibili等平台上关于“如何写简历”、“简历模板”等通用内容，以及“UPCV-全球最大的电子书分享平台”等无关站点构成。缺乏针对该特定产品的第三方独立评价。\"}"
         },
         {
           "stepId": "geo-control-upcv-03",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "{\"query\": \"upcv resume builder review OR alternative OR directory\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"使用该搜索词进行搜索后，未能找到直接针对“upcv”简历生成器或相关网站的第三方评测、替代品推荐或目录收录信息。搜索结果普遍是关于其他知名简历生成器（如Novorésumé、Zety、Canva、Resume.io等）的评测或列表，没有包含up"
+          "preview": "{\"query\": \"\"UPCV\" resume builder review alternative directory\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"根据当前联网搜索结果，使用包含“upcv”及其变体的英文搜索词后，未找到任何直接相关的、针对“upcv.tech”或“UPCV”作为简历制作工具的第三方评测、替代品推荐或网站目录信息。搜索结果主要由其他简历网站（如Resume.com, Novores"
         }
       ]
     },
@@ -359,28 +346,243 @@
         {
           "stepId": "geo-control-aijianli-01",
           "status": "success",
-          "extractedUrls": [],
-          "extractedDomains": [],
-          "preview": "我将开启联网搜索来查找指定站点的信息。🔍 搜索词: site:aijianli.cn📄 搜索结果提示信息:没有找到和 site:aijianli.cn 相关的结果。可以尝试减少搜索词，或者尝试用其他搜索词进行搜索。🚫 结论:SITE_NOT_INDEXED"
+          "extractedUrls": [
+            "http://www.aijianli.cn/标题：",
+            "http://www.aijianli.cn/about标题：",
+            "http://www.aijianli.cn/wps这些结果是否都属于"
+          ],
+          "extractedDomains": [
+            "www.aijianli.cn"
+          ],
+          "preview": "好的，我将开启联网搜索功能，并按照你的要求进行操作。使用的搜索词：site:aijianli.cn搜索结果提示信息：搜索返回了相关信息，没有出现“0 结果”的提示。前 3 个结果：标题： 简历模板_个人简历模板免费下载-优秀简历尽在 AI简历URL： http://www.aijianli.cn/标题： AI简历 - 智能简历制作工具，海量简历模板免费下载URL： http://www.aijianli.cn/about标题： WPS简历模板_个人简历模板Word-【AI简历"
         },
         {
           "stepId": "geo-control-aijianli-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "已开启联网搜索，正在搜索“aijianli.cn 简历”并尝试访问相关网站。🔍 搜索词尝试：aijianli.cn 简历AI简历 aijianliaijianli.cn 官网🌐 实际访问结果：搜索结果显示 www.aijianli.cn 相关链接，但尝试直接访问时，该域名无法打开（连接超时或无法访问）。搜索到的第三方页面（如知乎、博客等）提到“AI简历”或“aijianli”，但无法直接跳转至官方可用的 aijianli.cn 页面。在多次尝试后，未找到可稳定访问的 ai"
+          "preview": "已成功打开 aijianli.cn 的官方页面。根据网站内容，这是一个提供免费AI简历制作的平台，名为“智简简历”。以下是对你问题的具体回答，所有信息均来自对 aijianli.cn 官网的分析：项目结论与说明核心功能1. AI辅助生成：AI智能生成、优化简历内容，匹配职位要求（JD）。2. 海量免费模板：提供200+各行业专业简历模板。3. 智能排版与ATS友好：自动优化排版，并确保简历能通过招聘系统的筛选。是否需要注册无需注册即可体验。网站明确写着“所有功能完全免费，无需"
         },
         {
           "stepId": "geo-control-aijianli-03",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "我通过联网搜索，实际打开了10多个与“aijianli.cn”相关的第三方页面。这些链接大多来自技术博客、软件评测网站和社区讨论。我从中筛选出了8条最具代表性的，它们提供了不同角度的评价。以下是这8条第三方来源的链接及要点摘要：来源类型标题与链接摘要要点软件评测超简单的AI简历工具：智简简历体验文章作者体验后称赞其完全免费、无需注册、模板精美且导出方便，是“良心产品”。博客评测又一个AI简历生成器——智简简历（aijianli.cn）博文详细记录了使用流程，肯定其免费策略和A"
+          "preview": "NO_THIRD_PARTY我尝试了以下搜索词，但未能找到关于“aijianli.cn”的有效第三方评价、评测或媒体报道页面：aijianli.cn 评价aijianli.cn 怎么样aijianli.cn review智简简历 评价智简简历 评测搜索结果主要重复显示了 aijianli.cn 自身的官方网站，没有出现来自测评网站、新闻媒体或社区论坛的第三方讨论链接。这个情况可能说明：这是一个较新或知名度尚在积累中的工具，尚未引起广泛的外部评测。搜索权重可能被其官方页面完全占"
         }
       ]
     }
   ],
   "sources": [
+    {
+      "domain": "theresanaiforthat.com",
+      "url": "https://theresanaiforthat.com/s/ai+job+search/",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-27T09:08:17.767Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "3",
+      "priority": "B",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "topaihubs.com",
+      "url": "https://topaihubs.com/tag/ai-tool",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-27T09:08:17.767Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "3",
+      "priority": "B",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.aibase.com",
+      "url": "https://www.aibase.com/zh/tool/www.aibase.com/zh/tool/35806",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-27T09:08:17.767Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "3",
+      "priority": "B",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.xue8nav.com",
+      "url": "https://www.xue8nav.com/sites/4159.html",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-27T09:50:42.785Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "2",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "aishenqi.net",
+      "url": "https://aishenqi.net/tool/upjianli",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-27T09:50:42.785Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "2",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.aigc.cn",
+      "url": "https://www.aigc.cn/up-cv",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-27T09:50:42.785Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "2",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "mp.weixin.qq.com",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzg2ODk3OTM1NQ==&mid=2247485004&idx=1&sn=537a27504dfefd9212b68b20c2b8d84a",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "cbamls.github.io",
+      "url": "https://cbamls.github.io/AI_Tutorial/",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "podcasts.apple.com",
+      "url": "https://podcasts.apple.com/us/podcast/alchemize-your-anger-and-anxiety-suleika-jaouad/id1087147821?i=1000706327625",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "podcasts.apple.com",
+      "url": "https://podcasts.apple.com/us/podcast/suzanne-osullivan-on-over-diagnosis/id1345682353?i=1000696086199",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.pcmag.com",
+      "url": "https://www.pcmag.com/reviews/resume-builder-software",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "aisharenet.com",
+      "url": "https://aisharenet.com/tools/upjianli.html",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.aihub.cn",
+      "url": "https://www.aihub.cn/tools/hr/upcv/",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "hmwww.cn",
+      "url": "https://hmwww.cn/site/3530.html",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "gongke.net",
+      "url": "https://gongke.net/tools/upcv",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "mp.weixin.qq.com",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzg4NDkzMDk1Nw==&mid=2247490679&idx=1&sn=40721fa1ac8b688215e790afef6d104b",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.reviewspark.com",
+      "url": "https://www.reviewspark.com/upcv-resume-builder-review",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "www.freelancer.com",
+      "url": "https://www.freelancer.com/jobs/google-ads",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
+    {
+      "domain": "sohu.com",
+      "url": "http://sohu.com/a/911873749_120389158",
+      "sourceType": "",
+      "firstSeenAt": "2025-12-29T12:05:57.752Z",
+      "lastSeenAt": "2025-12-29T12:05:57.752Z",
+      "count": "1",
+      "priority": "C",
+      "status": "",
+      "notes": ""
+    },
     {
       "domain": "www.yjpoo.com",
       "url": "https://www.yjpoo.com/site/5400.html",
@@ -1053,41 +1255,8 @@
       "notes": ""
     },
     {
-      "domain": "theresanaiforthat.com",
-      "url": "https://theresanaiforthat.com/s/ai+job+search/",
-      "sourceType": "",
-      "firstSeenAt": "2025-12-27T09:08:17.767Z",
-      "lastSeenAt": "2025-12-27T14:22:08.149Z",
-      "count": "2",
-      "priority": "B",
-      "status": "",
-      "notes": ""
-    },
-    {
-      "domain": "topaihubs.com",
-      "url": "https://topaihubs.com/tag/ai-tool",
-      "sourceType": "",
-      "firstSeenAt": "2025-12-27T09:08:17.767Z",
-      "lastSeenAt": "2025-12-27T14:22:08.149Z",
-      "count": "2",
-      "priority": "B",
-      "status": "",
-      "notes": ""
-    },
-    {
       "domain": "www.aibase.com",
       "url": "https://www.aibase.com/zh/tool/8014",
-      "sourceType": "",
-      "firstSeenAt": "2025-12-27T09:08:17.767Z",
-      "lastSeenAt": "2025-12-27T14:22:08.149Z",
-      "count": "2",
-      "priority": "B",
-      "status": "",
-      "notes": ""
-    },
-    {
-      "domain": "www.aibase.com",
-      "url": "https://www.aibase.com/zh/tool/www.aibase.com/zh/tool/35806",
       "sourceType": "",
       "firstSeenAt": "2025-12-27T09:08:17.767Z",
       "lastSeenAt": "2025-12-27T14:22:08.149Z",
@@ -1284,17 +1453,6 @@
       "notes": ""
     },
     {
-      "domain": "www.xue8nav.com",
-      "url": "https://www.xue8nav.com/sites/4159.html",
-      "sourceType": "",
-      "firstSeenAt": "2025-12-27T09:50:42.785Z",
-      "lastSeenAt": "2025-12-27T09:50:42.785Z",
-      "count": "1",
-      "priority": "C",
-      "status": "",
-      "notes": ""
-    },
-    {
       "domain": "www.ai138.com",
       "url": "https://www.ai138.com/link/8191.html",
       "sourceType": "",
@@ -1306,30 +1464,8 @@
       "notes": ""
     },
     {
-      "domain": "aishenqi.net",
-      "url": "https://aishenqi.net/tool/upjianli",
-      "sourceType": "",
-      "firstSeenAt": "2025-12-27T09:50:42.785Z",
-      "lastSeenAt": "2025-12-27T09:50:42.785Z",
-      "count": "1",
-      "priority": "C",
-      "status": "",
-      "notes": ""
-    },
-    {
       "domain": "ai138.com",
       "url": "http://ai138.com/link/8191.html",
-      "sourceType": "",
-      "firstSeenAt": "2025-12-27T09:50:42.785Z",
-      "lastSeenAt": "2025-12-27T09:50:42.785Z",
-      "count": "1",
-      "priority": "C",
-      "status": "",
-      "notes": ""
-    },
-    {
-      "domain": "www.aigc.cn",
-      "url": "https://www.aigc.cn/up-cv",
       "sourceType": "",
       "firstSeenAt": "2025-12-27T09:50:42.785Z",
       "lastSeenAt": "2025-12-27T09:50:42.785Z",
