@@ -1,6 +1,37 @@
 {
   "entries": [
     {
+      "id": "20251229011231",
+      "createdAt": "2025-12-29T01:12:31.894Z",
+      "source": "schedule",
+      "runCount": 1,
+      "scenarioIds": [
+        "ai-resume-tool-review"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
+      "scheduleId": "daily-resume",
+      "scheduleName": "每日简历",
+      "jsonPath": "runs/runs-20251229011231.json",
+      "csvPath": "runs/runs-20251229011231.csv"
+    },
+    {
+      "id": "20251228021136",
+      "createdAt": "2025-12-28T02:11:36.637Z",
+      "source": "manual",
+      "runCount": 2,
+      "scenarioIds": [
+        "geo-control-magicv-art"
+      ],
+      "modelIds": [
+        "deepseek",
+        "kimi"
+      ],
+      "jsonPath": "runs/runs-20251228021136.json",
+      "csvPath": "runs/runs-20251228021136.csv"
+    },
+    {
       "id": "20251228011632",
       "createdAt": "2025-12-28T01:16:32.683Z",
       "source": "schedule",
