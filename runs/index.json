@@ -1,6 +1,22 @@
 {
   "entries": [
     {
+      "id": "20260105011233",
+      "createdAt": "2026-01-05T01:12:33.611Z",
+      "source": "schedule",
+      "runCount": 1,
+      "scenarioIds": [
+        "ai-resume-tool-review"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
+      "scheduleId": "daily-resume",
+      "scheduleName": "每日简历",
+      "jsonPath": "runs/runs-20260105011233.json",
+      "csvPath": "runs/runs-20260105011233.csv"
+    },
+    {
       "id": "20260103032816",
       "createdAt": "2026-01-03T03:28:16.294Z",
       "source": "schedule",
