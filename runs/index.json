@@ -1,6 +1,42 @@
 {
   "entries": [
     {
+      "id": "20260106011534",
+      "createdAt": "2026-01-06T01:15:34.063Z",
+      "source": "schedule",
+      "runCount": 1,
+      "scenarioIds": [
+        "ai-resume-tool-review"
+      ],
+      "modelIds": [
+        "deepseek"
+      ],
+      "scheduleId": "daily-resume",
+      "scheduleName": "每日简历",
+      "jsonPath": "runs/runs-20260106011534.json",
+      "csvPath": "runs/runs-20260106011534.csv"
+    },
+    {
+      "id": "20260105145546",
+      "createdAt": "2026-01-05T14:55:46.623Z",
+      "source": "schedule",
+      "runCount": 8,
+      "scenarioIds": [
+        "viberx360-geo-baseline",
+        "geo-control-magicv-art",
+        "geo-control-upcv-tech",
+        "geo-control-aijianli-cn"
+      ],
+      "modelIds": [
+        "kimi",
+        "deepseek"
+      ],
+      "scheduleId": "geo-weekly",
+      "scheduleName": "GEO 每周基线",
+      "jsonPath": "runs/runs-20260105145546.json",
+      "csvPath": "runs/runs-20260105145546.csv"
+    },
+    {
       "id": "20260105011233",
       "createdAt": "2026-01-05T01:12:33.611Z",
       "source": "schedule",
