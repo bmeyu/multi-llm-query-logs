@@ -1,6 +1,26 @@
 {
   "entries": [
     {
+      "id": "20260119030633",
+      "createdAt": "2026-01-19T03:06:33.093Z",
+      "source": "schedule",
+      "runCount": 8,
+      "scenarioIds": [
+        "viberx360-geo-baseline",
+        "geo-control-magicv-art",
+        "geo-control-upcv-tech",
+        "geo-control-aijianli-cn"
+      ],
+      "modelIds": [
+        "kimi",
+        "deepseek"
+      ],
+      "scheduleId": "geo-weekly",
+      "scheduleName": "GEO 每周基线",
+      "jsonPath": "runs/runs-20260119030633.json",
+      "csvPath": "runs/runs-20260119030633.csv"
+    },
+    {
       "id": "20260119011132",
       "createdAt": "2026-01-19T01:11:32.380Z",
       "source": "schedule",
