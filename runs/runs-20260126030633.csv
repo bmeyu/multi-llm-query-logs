@@ -1,0 +1,61 @@
+adapterId,adapterName,scenarioId,scenarioName,stepId,status,durationMs,errorMessage,responseText
+"kimi","Kimi（月之暗面）","viberx360-geo-baseline","ViberX360 GEO 基线","viberx360-geo-01","failed","250162","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","viberx360-geo-baseline","ViberX360 GEO 基线","viberx360-geo-02","failed","245094","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","viberx360-geo-baseline","ViberX360 GEO 基线","viberx360-geo-03","failed","245135","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-magicv-art","GEO 对照组（魔方简历 magicv.art）","geo-control-01","failed","250135","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-magicv-art","GEO 对照组（魔方简历 magicv.art）","geo-control-02","failed","245088","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-magicv-art","GEO 对照组（魔方简历 magicv.art）","geo-control-03","failed","245193","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-upcv-tech","GEO 对照组（upcv.tech）","geo-control-upcv-01","failed","250141","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-upcv-tech","GEO 对照组（upcv.tech）","geo-control-upcv-02","failed","245100","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-upcv-tech","GEO 对照组（upcv.tech）","geo-control-upcv-03","failed","245205","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-aijianli-cn","GEO 对照组（aijianli.cn）","geo-control-aijianli-01","failed","250119","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-aijianli-cn","GEO 对照组（aijianli.cn）","geo-control-aijianli-02","failed","245103","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"kimi","Kimi（月之暗面）","geo-control-aijianli-cn","GEO 对照组（aijianli.cn）","geo-control-aijianli-03","failed","245109","page.waitForSelector: Timeout 120000ms exceeded.
+Call log:
+  - waiting for locator('.chat-editor .send-button') to be visible
+",""
+"deepseek","DeepSeek","viberx360-geo-baseline","ViberX360 GEO 基线","viberx360-geo-01","success","80468","","好的，我现在开启联网搜索功能，并执行搜索。🔍 搜索词: site:viberx360.com搜索引擎提示信息:找不到和您的查询 site:viberx360.com 相符的内容或信息。结论: SITE_NOT_INDEXED使用的搜索词: site:viberx360.com看到的提示信息: “找不到和您的查询 site:viberx360.com 相符的内容或信息。”"
+"deepseek","DeepSeek","viberx360-geo-baseline","ViberX360 GEO 基线","viberx360-geo-02","success","80125","","好的，我现在开启联网搜索功能，并执行搜索。🔍 搜索词 1: ViberX360 resume builder搜索结果中没有直接链接到 viberx360.com 的官方页面。主要是一些求职建议文章和提及了多种简历工具（包括 ViberX360）的列表。🔍 搜索词 2: viberx360 resume搜索结果和第一个类似，没有找到官方网站。🔍 搜索词 3: viberx360.com resume这个搜索直接针对域名，但搜索结果列表中没有出现该网站的页面链接。结论: NOT_FOUND我尝试过的搜索词:ViberX360 resume builderviberx360 resumeviberx360.com resume这些搜索均未能引导我进入 viberx360.com 的官方页面。搜索引擎的结果主要是第三方网站的文章，这些文章将“ViberX360”作为众多简历工具之一进行介绍或提及，但没有提供直接通往其官网的有效链接。"
+"deepseek","DeepSeek","viberx360-geo-baseline","ViberX360 GEO 基线","viberx360-geo-03","success","80108","","根据你的要求，我搜索并分析了多个“无需注册的AI简历生成网站”，以下是8个符合条件的候选网站。为了方便你快速比较，我制作了下面的表格，汇总了每个网站的核心信息：#网站名称网站链接是否无需注册是否支持导出PDF1Rezly.aihttps://rezly.ai/是是2Reactive Resumehttps://rxresu.me/是是3魔方简历 (Magic Resume)https://magicv.art/是是4ResumeToJobhttps://resumetojob.ltlyl.fun/是是5UP简历(搜索结果未提供链接)否是6UPDF AI简历摘要生成器https://www.updf.cn/ai-tools/resume-summary-generator/是结果未明确说明7Resume Builder Pro AI 2026(iOS App)(作为App无需注册)是8Supawork AI(搜索结果未提供链接)是 (部分功能)结果未明确说明🚫 结果是否包含 viberx360.com？否。以上8个网站中，没有一个是 viberx360.com。🔍 主要竞品结合之前的搜索（site:viberx360.com 返回0结果）和本次搜索，虽然未能定位到 viberx360.com 本身，但在探索“无需注册AI简历生成”这一领域时，我发现当前市场主要由以下几类工具构成，可以视为潜在竞品：开源免费工具：这是最符合“无需注册”要求的类别，隐私性也更强。核心竞品：Reactive Resume、魔方简历 (Magic Resume)、ResumeToJob。它们都主打完全免费、无注册、数据本地存储和开源。商业在线平台：这类工具功能更全面，但通常需要注册。典型代表：搜索结果中提到的 UP简历、Kickresume、Rezi 等。它们往往采用“免费增值”模式，核心功能免费但高级功能或高级模板需要付费订阅。💡 如何进一步探索 ViberX360考虑到直接搜索其域名和名称都无法找到官网，这很可能意味着：网站可能已关闭或改名。品牌知名度较低，未在主流搜索中被索引。它可能是一个区域性、小范围使用或在特定社群（如某个技术论坛、教育机构内部）流传的工具。如果你需要继续寻找类似 viberx360 的工具，或者想了解以上任何一个候选网站的更多细节，我可以为你提供更深入的信息。"
+"deepseek","DeepSeek","geo-control-magicv-art","GEO 对照组（魔方简历 magicv.art）","geo-control-01","success","80394","","json复制下载{     ""query"": ""site:magicv.art"",     ""status"": ""SITE_NOT_INDEXED"",     ""results"": [],     ""notes"": ""搜索引擎未收录该网站的页面内容。"" }"
+"deepseek","DeepSeek","geo-control-magicv-art","GEO 对照组（魔方简历 magicv.art）","geo-control-02","success","80134","","json复制下载{     ""query"": ""魔方简历 评测 推荐"",     ""status"": ""NO_THIRD_PARTY"",     ""results"": [],     ""notes"": ""搜索结果主要关联到魔方（玩具）、魔方比赛以及词典释义，未找到与名为'魔方简历'（MagicV Resume）相关的第三方评测或推荐页面。"" }"
+"deepseek","DeepSeek","geo-control-magicv-art","GEO 对照组（魔方简历 magicv.art）","geo-control-03","success","80119","","{""query"": """"magicv resume"" OR ""magicv resume builder"" review OR alternative"",""status"": ""NO_THIRD_PARTY"",""results"": [],""notes"": ""搜索结果没有返回关于 'magicv resume' 或 'magicv resume builder' 的第三方评测、替代品或目录列表。大部分结果指向其他简历生成器，如 Kickresume、Resume.com、Zety 等，以及一个名为 ""Magic Resume"" 的不同产品。没有发现针对指定产品的独立评论。""}"
+"deepseek","DeepSeek","geo-control-upcv-tech","GEO 对照组（upcv.tech）","geo-control-upcv-01","success","80368","","json复制下载{   ""query"": ""site:upcv.tech"",   ""status"": ""SITE_NOT_INDEXED"",   ""results"": [],   ""notes"": ""该域名在搜索引擎中没有被索引的页面。可能的原因：网站未公开、被屏蔽、robots.txt禁止爬取，或搜索引擎尚未收录。"" }"
+"deepseek","DeepSeek","geo-control-upcv-tech","GEO 对照组（upcv.tech）","geo-control-upcv-02","success","80126","","json复制下载{   ""query"": ""\""up简历\"" 评测 OR 推荐 OR 收录 OR 怎么样"",   ""status"": ""NO_THIRD_PARTY"",   ""results"": [],   ""notes"": ""搜索结果未找到与‘up简历’（特别是与 upcv.tech 相关）相关的第三方评测、推荐或收录信息。"" }"
+"deepseek","DeepSeek","geo-control-upcv-tech","GEO 对照组（upcv.tech）","geo-control-upcv-03","success","80132","","{""query"": ""upcv resume builder review alternative directory"",""status"": ""NO_THIRD_PARTY"",""results"": [],""notes"": ""没有找到针对“upcv”简历生成器（即 upcv.tech）的第三方评测、替代方案推荐或网站目录收录信息。搜索结果主要指向其他通用的简历工具或网站。""}"
+"deepseek","DeepSeek","geo-control-aijianli-cn","GEO 对照组（aijianli.cn）","geo-control-aijianli-01","success","80374","","我尝试执行搜索，但目前联网搜索功能暂时无法访问。根据您的要求，如果搜索结果是0，需要输出SITE_NOT_INDEXED并列出搜索词和提示信息。由于我无法实际进行搜索，请允许我说明：搜索词应为：site:aijianli.cn但实际未能完成搜索，因此无法提供准确的搜索结果或提示信息。建议您自行通过搜索引擎使用该搜索词进行验证，或稍后重试联网搜索功能。"
+"deepseek","DeepSeek","geo-control-aijianli-cn","GEO 对照组（aijianli.cn）","geo-control-aijianli-02","success","80108","","我尝试了联网搜索，但由于技术原因暂时无法访问搜索引擎。让我通过我的现有知识来帮您分析aijianli.cn：搜索词尝试：""aijianli.cn 简历""""AI简历 aijianli""根据我的知识库信息，aijianli.cn（爱简历）是一个AI智能简历制作平台，但由于我无法实际打开网页验证最新信息，我无法提供基于当前实际访问的详细信息。如果您需要准确的最新信息，建议您：直接访问 aijianli.cn 官网使用搜索引擎手动搜索该网站稍后再尝试让我重新进行联网搜索当前状态：NOT_FOUND尝试过的搜索词：""aijianli.cn 简历""""AI简历 aijianli""（注：此回答基于我无法实际联网访问的情况，实际情况可能需要您自行验证）"
+"deepseek","DeepSeek","geo-control-aijianli-cn","GEO 对照组（aijianli.cn）","geo-control-aijianli-03","success","80094","","我尝试联网搜索了“aijianli.cn 评价”，但搜索失败了。随后我尝试了搜索“aijianli.cn review”，这次搜索成功了，但搜索结果中并未找到符合您要求的第三方评测、目录收录、媒体报道或社区讨论页面。以下是我看到的搜索结果和尝试过的搜索词：搜索词尝试：aijianli.cn 评价aijianli.cn review搜索结果（搜索aijianli.cn review获得）：来自 aijianli.cn 本身的“AI简历制作工具”页面。其他结果主要直接跳转到 aijianli.cn 官网的不同子页面（如 /resume、/creator、/tag 等），而非第三方网站。结论：根据此次联网搜索结果，我未能找到任何第三方来源的讨论或评价页面。搜索结果主要由该网站自身的页面主导。最终输出：NO_THIRD_PARTY尝试过的搜索词：aijianli.cn 评价aijianli.cn review"
