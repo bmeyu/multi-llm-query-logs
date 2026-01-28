@@ -1,6 +1,6 @@
 {
-  "createdAt": "2026-01-26T03:06:33.065Z",
-  "runId": "20260126030633",
+  "createdAt": "2026-01-28T02:54:01.098Z",
+  "runId": "20260128025401",
   "scenarios": [
     {
       "scenarioId": "viberx360-geo-baseline",
@@ -165,31 +165,29 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "好的，我现在开启联网搜索功能，并执行搜索。🔍 搜索词: site:viberx360.com搜索引擎提示信息:找不到和您的查询 site:viberx360.com 相符的内容或信息。结论: SITE_NOT_INDEXED使用的搜索词: site:viberx360.com看到的提示信息: “找不到和您的查询 site:viberx360.com 相符的内容或信息。”"
+          "preview": "我目前无法直接执行联网搜索或打开网页。您提到的功能需要特定的工具支持，而我现在没有这个能力。不过，您可以自己尝试以下操作来验证：在任何搜索引擎（如 Google、Bing）的搜索框中输入：site:viberx360.com查看搜索结果。如果显示“没有找到匹配‘site:viberx360.com’的结果”或类似提示，则符合“SITE_NOT_INDEXED”的情况。根据您的指令，模拟判断如下：根据常见的搜索引擎行为，使用 site: 操作符查询一个独立域名，如果结果为零，通"
         },
         {
           "stepId": "viberx360-geo-02",
           "status": "success",
-          "extractedUrls": [],
+          "extractedUrls": [
+            "https://viberx360.com）和“功能”、“定价”等相关页面。根据您的指令，自行找到答案：网站用途：查看首页标题和介绍。3个核心功能：在“功能”或“产品”页面查找。是否需要注册：查看是否有“免费注册”或“立即开始”按钮。是否支持导出"
+          ],
           "extractedDomains": [],
-          "preview": "好的，我现在开启联网搜索功能，并执行搜索。🔍 搜索词 1: ViberX360 resume builder搜索结果中没有直接链接到 viberx360.com 的官方页面。主要是一些求职建议文章和提及了多种简历工具（包括 ViberX360）的列表。🔍 搜索词 2: viberx360 resume搜索结果和第一个类似，没有找到官方网站。🔍 搜索词 3: viberx360.com resume这个搜索直接针对域名，但搜索结果列表中没有出现该网站的页面链接。结论: N"
+          "preview": "我目前无法直接执行联网搜索并打开网页。您需要的信息无法通过我的当前能力获取。不过，我可以为您提供一个清晰的行动方案来获取这些信息：请您自行搜索和验证：执行搜索：在任何搜索引擎（如 Google、Bing）中，依次尝试搜索以下关键词：ViberX360 resume builderviberx360 简历site:viberx360.com访问网站：如果搜索结果中有 viberx360.com 域名的链接，请点击进入。浏览其首页（如 https://viberx360.com）"
         },
         {
           "stepId": "viberx360-geo-03",
           "status": "success",
           "extractedUrls": [
-            "https://rezly.ai/是是2Reactive",
-            "https://rxresu.me/是是3魔方简历",
-            "https://magicv.art/是是4ResumeToJobhttps://resumetojob.ltlyl.fun/是是5UP简历(搜索结果未提供链接)否是6UPDF",
-            "https://www.updf.cn/ai-tools/resume-summary-generator/是结果未明确说明7Resume"
+            "https://github.com/AmruthPillai/Reactive-Resume2魔方简历",
+            "https://magicv.art/zh3ResumeToJob是是https://resumetojob.ltlyl.fun/4UP简历否是https://www.aitop100.cn/tools/upcv-tech5TalenCat"
           ],
           "extractedDomains": [
-            "rezly.ai",
-            "rxresu.me",
-            "magicv.art",
-            "www.updf.cn"
+            "github.com",
+            "magicv.art"
           ],
-          "preview": "根据你的要求，我搜索并分析了多个“无需注册的AI简历生成网站”，以下是8个符合条件的候选网站。为了方便你快速比较，我制作了下面的表格，汇总了每个网站的核心信息：#网站名称网站链接是否无需注册是否支持导出PDF1Rezly.aihttps://rezly.ai/是是2Reactive Resumehttps://rxresu.me/是是3魔方简历 (Magic Resume)https://magicv.art/是是4ResumeToJobhttps://resumetojob"
+          "preview": "根据你的搜索要求，我查找了“无需注册”的AI简历生成网站。不过，搜索结果中没有任何一个站点同时提及“无需注册”和“viberx360.com”，说明你要找的这个网站在主流推荐中并未出现。以下是根据搜索结果整理的8个候选网站及相关信息。8 个候选网站信息汇总下表汇总了这些网站是否“无需注册”及“支持导出PDF”的情况，方便你快速比较。序号网站名称是否无需注册是否支持导出 PDF网址链接1Reactive Resume是是https://github.com/AmruthPill"
         }
       ]
     },
@@ -212,21 +210,21 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n    \"query\": \"site:magicv.art\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"搜索引擎未收录该网站的页面内容。\"\n}"
+          "preview": "json复制下载{\n    \"query\": \"site:magicv.art\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"未找到该网站的索引信息，可能是新站点、非公开内容或搜索引擎未收录。\"\n}"
         },
         {
           "stepId": "geo-control-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n    \"query\": \"魔方简历 评测 推荐\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"搜索结果主要关联到魔方（玩具）、魔方比赛以及词典释义，未找到与名为'魔方简历'（MagicV Resume）相关的第三方评测或推荐页面。\"\n}"
+          "preview": "json复制下载{\n    \"query\": \"魔方简历 评测\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"本次联网搜索结果未找到来自第三方网站（非magicv.art）的相关评测、推荐或讨论页面，可能该产品较新，公开的第三方评价信息尚少。\"\n}"
         },
         {
           "stepId": "geo-control-03",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "{\"query\": \"\"magicv resume\" OR \"magicv resume builder\" review OR alternative\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"搜索结果没有返回关于 'magicv resume' 或 'magicv resume builder' 的第三方评测、替代品或目录列表。大部分结果指向其他简历生成器，如 Kickresume、Resume.com、Zety"
+          "preview": "json复制下载{\n    \"query\": \"\\\"magicv\\\" resume review\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"本次联网搜索未能找到关于“magicv”或“MagicV”在线简历生成器的独立第三方评测、目录或替代产品推荐页面。搜索结果多为通用简历制作网站或模板服务，未见针对该特定产品的讨论。\"\n}"
         }
       ]
     },
@@ -249,21 +247,21 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n  \"query\": \"site:upcv.tech\",\n  \"status\": \"SITE_NOT_INDEXED\",\n  \"results\": [],\n  \"notes\": \"该域名在搜索引擎中没有被索引的页面。可能的原因：网站未公开、被屏蔽、robots.txt禁止爬取，或搜索引擎尚未收录。\"\n}"
+          "preview": "json复制下载{\n    \"query\": \"site:upcv.tech\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"搜索引擎未收录该域名下的页面，可能原因：网站为新站点、未提交索引、或被robots.txt禁止抓取。\"\n}"
         },
         {
           "stepId": "geo-control-upcv-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "json复制下载{\n  \"query\": \"\\\"up简历\\\" 评测 OR 推荐 OR 收录 OR 怎么样\",\n  \"status\": \"NO_THIRD_PARTY\",\n  \"results\": [],\n  \"notes\": \"搜索结果未找到与‘up简历’（特别是与 upcv.tech 相关）相关的第三方评测、推荐或收录信息。\"\n}"
+          "preview": "{\"query\": \"up 简历 评测 OR 推荐 OR 收录 OR 怎么样\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"未找到直接针对 upcv.tech 网站的第三方评测、推荐或讨论。搜索结果中“up简历”相关词条通常指代为用户（UP主）提供简历服务的其他平台介绍，或制作“向上发展”简历的技巧文章，未发现对该特定站点的独立评价。\"}"
         },
         {
           "stepId": "geo-control-upcv-03",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "{\"query\": \"upcv resume builder review alternative directory\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"没有找到针对“upcv”简历生成器（即 upcv.tech）的第三方评测、替代方案推荐或网站目录收录信息。搜索结果主要指向其他通用的简历工具或网站。\"}"
+          "preview": "{\"query\": \"\"upcv\" resume builder review OR alternative\",\"status\": \"NO_THIRD_PARTY\",\"results\": [],\"notes\": \"搜索结果显示，upcv.tech 这个特定的简历制作工具（“UP简历”）在常见的第三方评测网站、软件目录或博客中缺乏独立的评测、对比或推荐信息。主流科技媒体、软件评测平台或社区论坛（如Product Hunt, G2, Capterra, Reddit等）中均未找到"
         }
       ]
     },
@@ -286,21 +284,21 @@
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "我尝试执行搜索，但目前联网搜索功能暂时无法访问。根据您的要求，如果搜索结果是0，需要输出SITE_NOT_INDEXED并列出搜索词和提示信息。由于我无法实际进行搜索，请允许我说明：搜索词应为：site:aijianli.cn但实际未能完成搜索，因此无法提供准确的搜索结果或提示信息。建议您自行通过搜索引擎使用该搜索词进行验证，或稍后重试联网搜索功能。"
+          "preview": "SITE_NOT_INDEXED使用的搜索词与提示信息项目具体信息实际使用的搜索词site:aijianli.cn搜索结果页的提示搜索引擎显示的提示信息为：“没有找到与‘site:aijianli.cn’匹配的内容。”结果说明当前搜索引擎的索引中没有找到属于 aijianli.cn 这个域名的网页。这通常意味着该网站可能是一个全新的站点，搜索引擎的爬虫（Spider）尚未抓取；或者网站的 robots.txt 文件设置了禁止抓取规则；又或者网站的所有页面都被标记了 noind"
         },
         {
           "stepId": "geo-control-aijianli-02",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "我尝试了联网搜索，但由于技术原因暂时无法访问搜索引擎。让我通过我的现有知识来帮您分析aijianli.cn：搜索词尝试：\"aijianli.cn 简历\"\"AI简历 aijianli\"根据我的知识库信息，aijianli.cn（爱简历）是一个AI智能简历制作平台，但由于我无法实际打开网页验证最新信息，我无法提供基于当前实际访问的详细信息。如果您需要准确的最新信息，建议您：直接访问 aijianli.cn 官网使用搜索引擎手动搜索该网站稍后再尝试让我重新进行联网搜索当前状态：NO"
+          "preview": "已开启联网搜索。我尝试搜索了“aijianli.cn 简历”以及“AI简历 aijianli”，但搜索结果中没有找到可以明确跳转到 aijianli.cn 官方网站的链接。尝试过的搜索词：aijianli.cn 简历AI简历 aijianli因此，我的输出是：NOT_FOUND目前无法访问该网站的具体页面来获取其功能、价格等详细信息。这可能是由于网站较新、未被广泛收录，或其服务器设置暂时无法访问。"
         },
         {
           "stepId": "geo-control-aijianli-03",
           "status": "success",
           "extractedUrls": [],
           "extractedDomains": [],
-          "preview": "我尝试联网搜索了“aijianli.cn 评价”，但搜索失败了。随后我尝试了搜索“aijianli.cn review”，这次搜索成功了，但搜索结果中并未找到符合您要求的第三方评测、目录收录、媒体报道或社区讨论页面。以下是我看到的搜索结果和尝试过的搜索词：搜索词尝试：aijianli.cn 评价aijianli.cn review搜索结果（搜索aijianli.cn review获得）：来自 aijianli.cn 本身的“AI简历制作工具”页面。其他结果主要直接跳转到 ai"
+          "preview": "已开启联网搜索并尝试查找第三方评价。我尝试了多个搜索词，但目前没有找到来自评测网站、媒体报道或社区讨论等可靠的第三方评价来源。搜索结果要么完全缺失，要么大部分链接是搜索引擎的空白页，或者指向一些网站分类目录，但这些目录页面通常只包含网址而没有实际评价内容，不符合你要求的“评测/目录收录/媒体报道/社区讨论”。尝试过的搜索词：aijianli.cn 评价aijianli.cn 怎么样aijianli.cn review因此，我的输出是：NO_THIRD_PARTY"
         }
       ]
     }
