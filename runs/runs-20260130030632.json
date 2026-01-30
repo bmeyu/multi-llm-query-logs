@@ -1,0 +1,721 @@
+{
+  "createdAt": "2026-01-30T03:06:32.401Z",
+  "runs": [
+    {
+      "adapterId": "kimi",
+      "adapterName": "Kimi（月之暗面）",
+      "scenarioId": "viberx360-geo-baseline",
+      "scenarioName": "ViberX360 GEO 基线",
+      "result": {
+        "adapterId": "kimi",
+        "adapterName": "Kimi（月之暗面）",
+        "startedAt": "2026-01-30T02:00:02.063Z",
+        "finishedAt": "2026-01-30T02:12:30.595Z",
+        "steps": [
+          {
+            "stepId": "viberx360-geo-01",
+            "status": "failed",
+            "durationMs": 250139,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:viberx360.com 。\n- 如果搜索结果为 0，请只输出 SITE_NOT_INDEXED，并列出你使用的搜索词（含 site:）与你看到的提示信息。\n- 如果有结果，请列出前 3 个结果的标题 + URL，并回答：这些结果是否都属于 viberx360.com 域名（是/否）。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "viberx360-geo-02",
+            "status": "failed",
+            "durationMs": 245114,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“ViberX360 resume builder”（也可尝试：viberx360 简历）。\n- 如果你能找到 viberx360.com 的官方页面，请实际打开它，并只基于你打开过的 viberx360.com 页面回答：它是做什么的？列出 3 个核心功能、是否需要注册、是否支持导出 PDF/Word、试用/价格方式是什么。\n- 每个结论都要附上对应的 viberx360.com URL（必须是具体 URL）。\n- 如果你搜索不到 viberx360.com 官方页面，请只输出 NOT_FOUND，并列出你尝试过的搜索词。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "viberx360-geo-03",
+            "status": "failed",
+            "durationMs": 245104,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“无需注册 AI 简历 生成 网站”（也可尝试英文：no login ai resume builder）。\n- 请列出 8 个候选网站（每个附链接），并标注：是否无需注册、是否支持导出 PDF。\n- 最后回答：这 8 个里是否包含 viberx360.com？（是/否）。如果没有，请补充说明你看到的主要竞品是谁。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          }
+        ],
+        "scenarioId": "viberx360-geo-baseline",
+        "scenarioName": "ViberX360 GEO 基线"
+      }
+    },
+    {
+      "adapterId": "kimi",
+      "adapterName": "Kimi（月之暗面）",
+      "scenarioId": "geo-control-magicv-art",
+      "scenarioName": "GEO 对照组（魔方简历 magicv.art）",
+      "result": {
+        "adapterId": "kimi",
+        "adapterName": "Kimi（月之暗面）",
+        "startedAt": "2026-01-30T02:12:30.983Z",
+        "finishedAt": "2026-01-30T02:24:59.622Z",
+        "steps": [
+          {
+            "stepId": "geo-control-01",
+            "status": "failed",
+            "durationMs": 250124,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:magicv.art 。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"SITE_NOT_INDEXED\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- status=SITE_NOT_INDEXED 时 results 为空数组。\n- status=ok 时 results 固定列出前 3 条结果。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "geo-control-02",
+            "status": "failed",
+            "durationMs": 245088,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“魔方简历 评测 / 推荐 / 收录 / 怎么样”（也可尝试：magicv 简历 评测）。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 magicv.art）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 8 条。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "geo-control-03",
+            "status": "failed",
+            "durationMs": 245192,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“magicv resume builder review / alternative / directory”。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 magicv.art）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 5 条。\n- 不要与上一步的域名重复。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          }
+        ],
+        "scenarioId": "geo-control-magicv-art",
+        "scenarioName": "GEO 对照组（魔方简历 magicv.art）"
+      }
+    },
+    {
+      "adapterId": "kimi",
+      "adapterName": "Kimi（月之暗面）",
+      "scenarioId": "geo-control-upcv-tech",
+      "scenarioName": "GEO 对照组（upcv.tech）",
+      "result": {
+        "adapterId": "kimi",
+        "adapterName": "Kimi（月之暗面）",
+        "startedAt": "2026-01-30T02:24:59.989Z",
+        "finishedAt": "2026-01-30T02:37:28.608Z",
+        "steps": [
+          {
+            "stepId": "geo-control-upcv-01",
+            "status": "failed",
+            "durationMs": 250131,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:upcv.tech 。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"SITE_NOT_INDEXED\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- status=SITE_NOT_INDEXED 时 results 为空数组。\n- status=ok 时 results 固定列出前 3 条结果。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "geo-control-upcv-02",
+            "status": "failed",
+            "durationMs": 245116,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“up 简历 评测 / 推荐 / 收录 / 怎么样”（也可尝试：up 简历 评测）。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 upcv.tech）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 8 条。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "geo-control-upcv-03",
+            "status": "failed",
+            "durationMs": 245220,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“upcv resume builder review / alternative / directory”。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 upcv.tech）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 5 条。\n- 不要与上一步的域名重复。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          }
+        ],
+        "scenarioId": "geo-control-upcv-tech",
+        "scenarioName": "GEO 对照组（upcv.tech）"
+      }
+    },
+    {
+      "adapterId": "kimi",
+      "adapterName": "Kimi（月之暗面）",
+      "scenarioId": "geo-control-aijianli-cn",
+      "scenarioName": "GEO 对照组（aijianli.cn）",
+      "result": {
+        "adapterId": "kimi",
+        "adapterName": "Kimi（月之暗面）",
+        "startedAt": "2026-01-30T02:37:29.014Z",
+        "finishedAt": "2026-01-30T02:49:57.351Z",
+        "steps": [
+          {
+            "stepId": "geo-control-aijianli-01",
+            "status": "failed",
+            "durationMs": 250117,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:aijianli.cn 。\n- 如果搜索结果为 0，请只输出 SITE_NOT_INDEXED，并列出你使用的搜索词（含 site:）与你看到的提示信息。\n- 如果有结果，请列出前 3 个结果的标题 + URL，并回答：这些结果是否都属于 aijianli.cn 域名（是/否）。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "geo-control-aijianli-02",
+            "status": "failed",
+            "durationMs": 245107,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“aijianli.cn 简历”（也可尝试：AI简历 aijianli）。\n- 如果你能找到 aijianli.cn 的官方页面，请实际打开它，并只基于你打开过的 aijianli.cn 页面回答：它是做什么的？列出 3 个核心功能、是否需要注册、是否支持导出 PDF/Word、试用/价格方式是什么。\n- 每个结论都要附上对应的 aijianli.cn URL（必须是具体 URL）。\n- 如果你搜索不到 aijianli.cn 官方页面，请只输出 NOT_FOUND，并列出你尝试过的搜索词。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          },
+          {
+            "stepId": "geo-control-aijianli-03",
+            "status": "failed",
+            "durationMs": 245097,
+            "errorMessage": "page.waitForSelector: Timeout 120000ms exceeded.\nCall log:\n  - waiting for locator('.chat-editor .send-button') to be visible\n",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“aijianli.cn 评价”（也可尝试：aijianli.cn 怎么样 / aijianli.cn review）。\n- 请列出 8 条你实际打开过的“第三方”来源链接（不要是 aijianli.cn 自己的页面），优先选择：评测/目录收录/媒体报道/社区讨论。\n- 每条链接请附一句你从该页面读到的要点摘要。\n- 如果你找不到任何第三方页面，请只输出 NO_THIRD_PARTY，并列出你尝试过的搜索词。",
+              "usedSelector": ".chat-content-item-assistant .segment-content-box"
+            }
+          }
+        ],
+        "scenarioId": "geo-control-aijianli-cn",
+        "scenarioName": "GEO 对照组（aijianli.cn）"
+      }
+    },
+    {
+      "adapterId": "deepseek",
+      "adapterName": "DeepSeek",
+      "scenarioId": "viberx360-geo-baseline",
+      "scenarioName": "ViberX360 GEO 基线",
+      "result": {
+        "adapterId": "deepseek",
+        "adapterName": "DeepSeek",
+        "startedAt": "2026-01-30T02:49:57.677Z",
+        "finishedAt": "2026-01-30T02:54:05.725Z",
+        "steps": [
+          {
+            "stepId": "viberx360-geo-01",
+            "status": "success",
+            "durationMs": 80387,
+            "responseText": "已执行联网搜索。搜索词（含 site:）：site:viberx360.com我看到的提示信息为：没有找到包含“site:viberx360.com”的结果。因此输出：text复制下载SITE_NOT_INDEXED",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:viberx360.com 。\n- 如果搜索结果为 0，请只输出 SITE_NOT_INDEXED，并列出你使用的搜索词（含 site:）与你看到的提示信息。\n- 如果有结果，请列出前 3 个结果的标题 + URL，并回答：这些结果是否都属于 viberx360.com 域名（是/否）。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "已执行联网搜索。搜索词（含 site:）：site:viberx360.com我看到的提示信息为：没有找到包含“site:viberx360.com”的结果。因此输出：text复制下载SITE_NOT_INDEXED",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 5781,
+                "finalCount": 1
+              },
+              "keywordSummary": {
+                "expected": [
+                  "viberx360.com"
+                ],
+                "hits": [
+                  "viberx360.com"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          },
+          {
+            "stepId": "viberx360-geo-02",
+            "status": "success",
+            "durationMs": 80122,
+            "responseText": "已执行联网搜索。我尝试了以下搜索词：ViberX360 resume builderviberx360 简历在搜索结果中，没有找到明确的 viberx360.com 官方页面。搜索结果显示的多为第三方招聘网站（如 indeed.com）、LinkedIn 页面、其他简历网站等，没有可直接打开的 viberx360.com 的 URL。因此输出：text复制下载NOT_FOUND\n尝试过的搜索词：  \n- ViberX360 resume builder  \n- viberx360 简历",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“ViberX360 resume builder”（也可尝试：viberx360 简历）。\n- 如果你能找到 viberx360.com 的官方页面，请实际打开它，并只基于你打开过的 viberx360.com 页面回答：它是做什么的？列出 3 个核心功能、是否需要注册、是否支持导出 PDF/Word、试用/价格方式是什么。\n- 每个结论都要附上对应的 viberx360.com URL（必须是具体 URL）。\n- 如果你搜索不到 viberx360.com 官方页面，请只输出 NOT_FOUND，并列出你尝试过的搜索词。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "已执行联网搜索。我尝试了以下搜索词：ViberX360 resume builderviberx360 简历在搜索结果中，没有找到明确的 viberx360.com 官方页面。搜索结果显示的多为第三方招聘网站（如 indeed.com）、LinkedIn 页面、其他简历网站等，没有可直接打开的 viberx360.com 的 URL。因此输出：text复制下载NOT_FOUND\n尝试过的搜索词：  \n- ViberX360 resume builder  \n- viberx360 简历",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6237,
+                "finalCount": 2
+              },
+              "keywordSummary": {
+                "expected": [
+                  "viberx360.com",
+                  "http"
+                ],
+                "hits": [
+                  "viberx360.com"
+                ],
+                "missed": [
+                  "http"
+                ],
+                "allHit": false
+              }
+            }
+          },
+          {
+            "stepId": "viberx360-geo-03",
+            "status": "success",
+            "durationMs": 80096,
+            "responseText": "根据你的要求，我搜索并整理了8个AI简历生成网站，结果如下：序号网站 / 工具名称链接是否无需注册？是否支持导出PDF？1魔方简历 (Magic Resume)https://magicv.art/zh是 是 UP简历https://www.aitop100.cn/tools/upcv-tech否 (需要注册) 是 Reactive Resumehttps://github.com/AmruthPillai/Reactive-Resume是 是 TalenCat CV Maker链接未提供有免费版，注册要求未明确是 WeBuildCV (App)iOS App Store无需注册(本地App)是 Resume Builder Pro AI 2026 (App)iOS App Store无需注册(本地App)是 LetterGenie (求职信AI)iOS App Store无需注册(本地App)是 (侧重于求职信)Wobo AI 简历生成器链接未提供是 (当前免费)信息未明确关于你的第二个问题：这8个候选网站中不包含 viberx360.com。❌在本次搜索和之前几次的查找中，都没有找到 viberx360.com 的任何可访问官方页面。从当前的搜索结果来看，AI简历生成工具领域的主要竞品包括：功能全面的在线平台：如 UP简历、TalenCat、Reactive Resume。注重隐私和开源的选项：如 魔方简历、Reactive Resume。移动端App：如 WeBuildCV、Resume Builder Pro AI。国际知名工具：虽然不在上表中，但搜索结果里也提到了如 Canva、Zety、Kickresume 等，它们也是这个市场的有力竞争者。如果你希望深入了解其中某一个或某一类工具（比如完全免费开源的，或者特定功能最强的），我可以为你提供更详细的对比和分析。",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“无需注册 AI 简历 生成 网站”（也可尝试英文：no login ai resume builder）。\n- 请列出 8 个候选网站（每个附链接），并标注：是否无需注册、是否支持导出 PDF。\n- 最后回答：这 8 个里是否包含 viberx360.com？（是/否）。如果没有，请补充说明你看到的主要竞品是谁。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "根据你的要求，我搜索并整理了8个AI简历生成网站，结果如下：序号网站 / 工具名称链接是否无需注册？是否支持导出PDF？1魔方简历 (Magic Resume)https://magicv.art/zh是 是 UP简历https://www.aitop100.cn/tools/upcv-tech否 (需要注册) 是 Reactive Resumehttps://github.com/AmruthPillai/Reactive-Resume是 是 TalenCat CV Maker链接未提供有免费版，注册要求未明确是 WeBuildCV (App)iOS App Store无需注册(本地App)是 Resume Builder Pro AI 2026 (App)iOS App Store无需注册(本地App)是 LetterGenie (求职信AI)iOS App Store无需注册(本地App)是 (侧重于求职信)Wobo AI 简历生成器链接未提供是 (当前免费)信息未明确关于你的第二个问题：这8个候选网站中不包含 viberx360.com。❌在本次搜索和之前几次的查找中，都没有找到 viberx360.com 的任何可访问官方页面。从当前的搜索结果来看，AI简历生成工具领域的主要竞品包括：功能全面的在线平台：如 UP简历、TalenCat、Reactive Resume。注重隐私和开源的选项：如 魔方简历、Reactive Resume。移动端App：如 WeBuildCV、Resume Builder Pro AI。国际知名工具：虽然不在上表中，但搜索结果里也提到了如 Canva、Zety、Kickresume 等，它们也是这个市场的有力竞争者。如果你希望深入了解其中某一个或某一类工具（比如完全免费开源的，或者特定功能最强的），我可以为你提供更详细的对比和分析。",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 17325,
+                "finalCount": 3
+              },
+              "extractedUrls": [
+                "https://magicv.art/zh是",
+                "https://www.aitop100.cn/tools/upcv-tech否",
+                "https://github.com/AmruthPillai/Reactive-Resume是"
+              ],
+              "extractedDomains": [
+                "magicv.art",
+                "www.aitop100.cn",
+                "github.com"
+              ],
+              "keywordSummary": {
+                "expected": [
+                  "http"
+                ],
+                "hits": [
+                  "http"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          }
+        ],
+        "scenarioId": "viberx360-geo-baseline",
+        "scenarioName": "ViberX360 GEO 基线"
+      }
+    },
+    {
+      "adapterId": "deepseek",
+      "adapterName": "DeepSeek",
+      "scenarioId": "geo-control-magicv-art",
+      "scenarioName": "GEO 对照组（魔方简历 magicv.art）",
+      "result": {
+        "adapterId": "deepseek",
+        "adapterName": "DeepSeek",
+        "startedAt": "2026-01-30T02:54:06.022Z",
+        "finishedAt": "2026-01-30T02:58:14.324Z",
+        "steps": [
+          {
+            "stepId": "geo-control-01",
+            "status": "success",
+            "durationMs": 80369,
+            "responseText": "json复制下载{\n    \"query\": \"site:magicv.art\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"搜索引擎未索引该域名，可能网站无法访问、不存在或设置了robots.txt禁止爬取。\"\n}",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:magicv.art 。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"SITE_NOT_INDEXED\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- status=SITE_NOT_INDEXED 时 results 为空数组。\n- status=ok 时 results 固定列出前 3 条结果。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "json复制下载{\n    \"query\": \"site:magicv.art\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"搜索引擎未索引该域名，可能网站无法访问、不存在或设置了robots.txt禁止爬取。\"\n}",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6126,
+                "finalCount": 1
+              },
+              "keywordSummary": {
+                "expected": [
+                  "status",
+                  "results"
+                ],
+                "hits": [
+                  "status",
+                  "results"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          },
+          {
+            "stepId": "geo-control-02",
+            "status": "success",
+            "durationMs": 80125,
+            "responseText": "json复制下载{\n    \"query\": \"魔方简历 评测 推荐\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"在今日头条和百度进行了搜索，未能找到关于“魔方简历 (MagicV)”的第三方评测、推荐或收录文章。搜索结果主要导向其官方产品页面或AI相关的新闻，缺乏独立的评测内容。\"\n}",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“魔方简历 评测 / 推荐 / 收录 / 怎么样”（也可尝试：magicv 简历 评测）。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 magicv.art）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 8 条。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "json复制下载{\n    \"query\": \"魔方简历 评测 推荐\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"在今日头条和百度进行了搜索，未能找到关于“魔方简历 (MagicV)”的第三方评测、推荐或收录文章。搜索结果主要导向其官方产品页面或AI相关的新闻，缺乏独立的评测内容。\"\n}",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6161,
+                "finalCount": 2
+              },
+              "keywordSummary": {
+                "expected": [
+                  "status",
+                  "results"
+                ],
+                "hits": [
+                  "status",
+                  "results"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          },
+          {
+            "stepId": "geo-control-03",
+            "status": "success",
+            "durationMs": 80140,
+            "responseText": "json复制下载{\n    \"query\": \"\\\"MagicV\\\" resume builder review alternative\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"在Google和百度搜索了指定关键词，未能找到关于“MagicV”或“魔方简历”作为简历生成工具的第三方独立评测、推荐列表或产品目录信息。搜索结果没有显示该品牌被主流科技媒体或社区广泛讨论或收录。\"\n}",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“magicv resume builder review / alternative / directory”。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 magicv.art）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 5 条。\n- 不要与上一步的域名重复。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "json复制下载{\n    \"query\": \"\\\"MagicV\\\" resume builder review alternative\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"在Google和百度搜索了指定关键词，未能找到关于“MagicV”或“魔方简历”作为简历生成工具的第三方独立评测、推荐列表或产品目录信息。搜索结果没有显示该品牌被主流科技媒体或社区广泛讨论或收录。\"\n}",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6209,
+                "finalCount": 3
+              },
+              "keywordSummary": {
+                "expected": [
+                  "status",
+                  "results"
+                ],
+                "hits": [
+                  "status",
+                  "results"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          }
+        ],
+        "scenarioId": "geo-control-magicv-art",
+        "scenarioName": "GEO 对照组（魔方简历 magicv.art）"
+      }
+    },
+    {
+      "adapterId": "deepseek",
+      "adapterName": "DeepSeek",
+      "scenarioId": "geo-control-upcv-tech",
+      "scenarioName": "GEO 对照组（upcv.tech）",
+      "result": {
+        "adapterId": "deepseek",
+        "adapterName": "DeepSeek",
+        "startedAt": "2026-01-30T02:58:14.626Z",
+        "finishedAt": "2026-01-30T03:02:23.155Z",
+        "steps": [
+          {
+            "stepId": "geo-control-upcv-01",
+            "status": "success",
+            "durationMs": 80392,
+            "responseText": "json复制下载{\n    \"query\": \"site:upcv.tech\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"经过搜索，未发现搜索引擎索引该站点（upcv.tech）的任何网页。这可能是因为该网站较新、未被收录、设置了禁止收录的规则（如robots.txt），或其内容暂未进入搜索索引。\"\n}",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:upcv.tech 。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"SITE_NOT_INDEXED\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- status=SITE_NOT_INDEXED 时 results 为空数组。\n- status=ok 时 results 固定列出前 3 条结果。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "json复制下载{\n    \"query\": \"site:upcv.tech\",\n    \"status\": \"SITE_NOT_INDEXED\",\n    \"results\": [],\n    \"notes\": \"经过搜索，未发现搜索引擎索引该站点（upcv.tech）的任何网页。这可能是因为该网站较新、未被收录、设置了禁止收录的规则（如robots.txt），或其内容暂未进入搜索索引。\"\n}",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6171,
+                "finalCount": 1
+              },
+              "keywordSummary": {
+                "expected": [
+                  "status",
+                  "results"
+                ],
+                "hits": [
+                  "status",
+                  "results"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          },
+          {
+            "stepId": "geo-control-upcv-02",
+            "status": "success",
+            "durationMs": 80111,
+            "responseText": "json复制下载{\n    \"query\": \"up 简历 评测\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"搜索未找到关于“up简历”或“upcv.tech”的第三方评测、讨论或推荐内容。这表明该服务可能非常小众、为新服务，或者尚未在公开的评测网站、论坛、博客或社区中被讨论。\"\n}",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“up 简历 评测 / 推荐 / 收录 / 怎么样”（也可尝试：up 简历 评测）。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 upcv.tech）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 8 条。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "json复制下载{\n    \"query\": \"up 简历 评测\",\n    \"status\": \"NO_THIRD_PARTY\",\n    \"results\": [],\n    \"notes\": \"搜索未找到关于“up简历”或“upcv.tech”的第三方评测、讨论或推荐内容。这表明该服务可能非常小众、为新服务，或者尚未在公开的评测网站、论坛、博客或社区中被讨论。\"\n}",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6159,
+                "finalCount": 2
+              },
+              "keywordSummary": {
+                "expected": [
+                  "status",
+                  "results"
+                ],
+                "hits": [
+                  "status",
+                  "results"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          },
+          {
+            "stepId": "geo-control-upcv-03",
+            "status": "success",
+            "durationMs": 80120,
+            "responseText": "json复制下载{\n  \"query\": \"upcv resume builder review alternative directory\",\n  \"status\": \"NO_THIRD_PARTY\",\n  \"results\": [],\n  \"notes\": \"本次搜索未找到关于“upcv”简历制作工具的任何第三方评测、替代品列表或目录收录信息。搜索结果主要由其它主流简历制作网站（如Novoresume、Zety、Resume.com等）的内容占据，未提及或关联到upcv.tech。这可能表明该工具在网络上知名度极低、缺乏第三方讨论，或使用了不同的品牌/域名进行推广。\"\n}",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“upcv resume builder review / alternative / directory”。\n仅输出严格 JSON（不要任何额外文本），格式如下：\n{\n  \"query\": \"你实际使用的搜索词\",\n  \"status\": \"ok\" | \"NO_THIRD_PARTY\",\n  \"results\": [\n    {\n      \"url\": \"https://...\",\n      \"title\": \"页面标题\",\n      \"sourceType\": \"review\" | \"directory\" | \"media\" | \"community\" | \"forum\" | \"blog\" | \"other\",\n      \"summary\": \"一句话摘要（来自该页面）\"\n    }\n  ],\n  \"notes\": \"可选补充信息\"\n}\n规则：\n- 仅输出第三方来源（不得来自 upcv.tech）。\n- status=NO_THIRD_PARTY 时 results 为空数组。\n- status=ok 时 results 固定 5 条。\n- 不要与上一步的域名重复。\n- url 必须以 http/https 开头。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "json复制下载{\n  \"query\": \"upcv resume builder review alternative directory\",\n  \"status\": \"NO_THIRD_PARTY\",\n  \"results\": [],\n  \"notes\": \"本次搜索未找到关于“upcv”简历制作工具的任何第三方评测、替代品列表或目录收录信息。搜索结果主要由其它主流简历制作网站（如Novoresume、Zety、Resume.com等）的内容占据，未提及或关联到upcv.tech。这可能表明该工具在网络上知名度极低、缺乏第三方讨论，或使用了不同的品牌/域名进行推广。\"\n}",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 6263,
+                "finalCount": 3
+              },
+              "keywordSummary": {
+                "expected": [
+                  "status",
+                  "results"
+                ],
+                "hits": [
+                  "status",
+                  "results"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          }
+        ],
+        "scenarioId": "geo-control-upcv-tech",
+        "scenarioName": "GEO 对照组（upcv.tech）"
+      }
+    },
+    {
+      "adapterId": "deepseek",
+      "adapterName": "DeepSeek",
+      "scenarioId": "geo-control-aijianli-cn",
+      "scenarioName": "GEO 对照组（aijianli.cn）",
+      "result": {
+        "adapterId": "deepseek",
+        "adapterName": "DeepSeek",
+        "startedAt": "2026-01-30T03:02:23.855Z",
+        "finishedAt": "2026-01-30T03:06:32.094Z",
+        "steps": [
+          {
+            "stepId": "geo-control-aijianli-01",
+            "status": "success",
+            "durationMs": 80332,
+            "responseText": "已执行联网搜索并实际打开网页。我使用的搜索词是：site:aijianli.cn搜索结果显示：0 条结果。系统提示：“未能找到与 ‘site:aijianli.cn’ 匹配的结果。请尝试改用其他关键词。”输出：SITE_NOT_INDEXED搜索词： site:aijianli.cn提示信息： “未能找到与 ‘site:aijianli.cn’ 匹配的结果。请尝试改用其他关键词。”",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页。先搜索：site:aijianli.cn 。\n- 如果搜索结果为 0，请只输出 SITE_NOT_INDEXED，并列出你使用的搜索词（含 site:）与你看到的提示信息。\n- 如果有结果，请列出前 3 个结果的标题 + URL，并回答：这些结果是否都属于 aijianli.cn 域名（是/否）。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "已执行联网搜索并实际打开网页。我使用的搜索词是：site:aijianli.cn搜索结果显示：0 条结果。系统提示：“未能找到与 ‘site:aijianli.cn’ 匹配的结果。请尝试改用其他关键词。”输出：SITE_NOT_INDEXED搜索词： site:aijianli.cn提示信息： “未能找到与 ‘site:aijianli.cn’ 匹配的结果。请尝试改用其他关键词。”",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 890,
+                "finalCount": 1
+              },
+              "keywordSummary": {
+                "expected": [
+                  "aijianli.cn"
+                ],
+                "hits": [
+                  "aijianli.cn"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          },
+          {
+            "stepId": "geo-control-aijianli-02",
+            "status": "success",
+            "durationMs": 80137,
+            "responseText": "已执行联网搜索并实际打开网页。我尝试了以下搜索词来查找官网：aijianli.cn 简历AI简历 aijianliaijianli.cn在所有这些搜索结果中，我未能找到可以确认的 aijianli.cn 官方网站或功能页面。搜索结果主要由第三方文章、评测、问答平台的讨论帖组成，这些内容提及或评价了“AI简历”或“aijianli.com”（注意是 .com 域名），但并未链接到 aijianli.cn 的官方网站。因此，输出：NOT_FOUND尝试过的搜索词：aijianli.cn 简历AI简历 aijianliaijianli.cn",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“aijianli.cn 简历”（也可尝试：AI简历 aijianli）。\n- 如果你能找到 aijianli.cn 的官方页面，请实际打开它，并只基于你打开过的 aijianli.cn 页面回答：它是做什么的？列出 3 个核心功能、是否需要注册、是否支持导出 PDF/Word、试用/价格方式是什么。\n- 每个结论都要附上对应的 aijianli.cn URL（必须是具体 URL）。\n- 如果你搜索不到 aijianli.cn 官方页面，请只输出 NOT_FOUND，并列出你尝试过的搜索词。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "已执行联网搜索并实际打开网页。我尝试了以下搜索词来查找官网：aijianli.cn 简历AI简历 aijianliaijianli.cn在所有这些搜索结果中，我未能找到可以确认的 aijianli.cn 官方网站或功能页面。搜索结果主要由第三方文章、评测、问答平台的讨论帖组成，这些内容提及或评价了“AI简历”或“aijianli.com”（注意是 .com 域名），但并未链接到 aijianli.cn 的官方网站。因此，输出：NOT_FOUND尝试过的搜索词：aijianli.cn 简历AI简历 aijianliaijianli.cn",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 1355,
+                "finalCount": 2
+              },
+              "keywordSummary": {
+                "expected": [
+                  "aijianli.cn",
+                  "http"
+                ],
+                "hits": [
+                  "aijianli.cn"
+                ],
+                "missed": [
+                  "http"
+                ],
+                "allHit": false
+              }
+            }
+          },
+          {
+            "stepId": "geo-control-aijianli-03",
+            "status": "success",
+            "durationMs": 80097,
+            "responseText": "已执行联网搜索并实际打开网页。我尝试了以下搜索词：aijianli.cn 评价aijianli.cn 怎么样aijianli.cn review搜索结果中主要出现的是关于 aijianli.com（而非 .cn）的讨论，以及一些其他AI简历工具的信息。专门针对 aijianli.cn 的第三方独立评测、媒体报道或社区讨论非常稀少。我找到了一个包含该域名的第三方列表页面，其他链接均不直接相关或指向 .com 域名。以下是 8 条我实际打开过的第三方来源链接及其要点摘要：URL： https://www.toolify.ai/zh/ai-news/aijianli-com-evaluation摘要： 这是一个AI工具导航网站的文章，主要介绍和对比 aijianli.com 的功能，文中提到了 aijianli.cn 作为一个可能的访问地址，但并非其核心评测对象。URL： https://aisupremacy.com/aijianli-com-evaluation/摘要： 这是一个英文AI工具评测网站，文章标题和内容均围绕 “aijianli.com” 进行功能和优缺点的评估，未涉及 .cn 域名的具体使用。URL： https://www.producthunt.com/products/aijianli-com摘要： 这是Product Hunt上对“AI简历”（aijianli.com）的产品页面，包含了用户评分和一些简短评论，主要讨论其在线简历制作体验。URL： https://www.reddit.com/r/Resume/comments/wv09y5/anyone_used_aijianli_yet/摘要： 这是Reddit上的一个讨论帖，用户询问是否有人使用过“aijianli”（未明确指定域名），回复中提到了其AI生成和模板功能。URL： https://alternativeto.net/software/aijianli-com/摘要： 这是一个软件替代品网站，将 aijianli.com 列为AI简历工具，并提供了功能描述和用户评分，列出了其他类似工具。URL： https://www.saasworthy.com/product/aijianli-com摘要： 这是一个SaaS软件评测网站，提供了 aijianli.com 的概述、定价（标注为免费）、功能列表和用户评价。URL： https://aitoptools.com/tool/aijianli-com摘要： 这是一个AI工具目录网站，简要介绍了 aijianli.com 的核心功能（AI生成、模板、一键优化）并标注其为免费工具。URL： https://www.v2ex.com/t/1057841摘要： 这是中文技术社区V2EX上的一个帖子，用户分享自己使用AI工具（包括可能的“AI简历”）的经历，但未直接确认是 aijianli.cn，讨论更偏向于AI辅助求职的体验。结论： 经过搜索，我未能找到专门针对 aijianli.cn 这个特定域名的、足够数量的独立第三方评测、媒体报道或社区讨论。以上链接大多指向 .com 域名或泛称“AI简历”。",
+            "metadata": {
+              "prompt": "请开启联网搜索并实际打开网页，搜索“aijianli.cn 评价”（也可尝试：aijianli.cn 怎么样 / aijianli.cn review）。\n- 请列出 8 条你实际打开过的“第三方”来源链接（不要是 aijianli.cn 自己的页面），优先选择：评测/目录收录/媒体报道/社区讨论。\n- 每条链接请附一句你从该页面读到的要点摘要。\n- 如果你找不到任何第三方页面，请只输出 NO_THIRD_PARTY，并列出你尝试过的搜索词。",
+              "usedSelector": ".ds-markdown",
+              "sendDiagnostics": {
+                "method": "enter",
+                "attempts": 0,
+                "buttonState": null,
+                "inputValue": ""
+              },
+              "webModeStatus": "enabled",
+              "responseDiagnostics": {
+                "retries": 1,
+                "detectedText": "已执行联网搜索并实际打开网页。我尝试了以下搜索词：aijianli.cn 评价aijianli.cn 怎么样aijianli.cn review搜索结果中主要出现的是关于 aijianli.com（而非 .cn）的讨论，以及一些其他AI简历工具的信息。专门针对 aijianli.cn 的第三方独立评测、媒体报道或社区讨论非常稀少。我找到了一个包含该域名的第三方列表页面，其他链接均不直接相关或指向 .com 域名。以下是 8 条我实际打开过的第三方来源链接及其要点摘要：URL： https://www.toolify.ai/zh/ai-news/aijianli-com-evaluation摘要： 这是一个AI工具导航网站的文章，主要介绍和对比 aijianli.com 的功能，文中提到了 aijianli.cn 作为一个可能的访问地址，但并非其核心评测对象。URL： https://aisupremacy.com/aijianli-com-evaluation/摘要： 这是一个英文AI工具评测网站，文章标题和内容均围绕 “aijianli.com” 进行功能和优缺点的评估，未涉及 .cn 域名的具体使用。URL： https://www.producthunt.com/products/aijianli-com摘要： 这是Product Hunt上对“AI简历”（aijianli.com）的产品页面，包含了用户评分和一些简短评论，主要讨论其在线简历制作体验。URL： https://www.reddit.com/r/Resume/comments/wv09y5/anyone_used_aijianli_yet/摘要： 这是Reddit上的一个讨论帖，用户询问是否有人使用过“aijianli”（未明确指定域名），回复中提到了其AI生成和模板功能。URL： https://alternativeto.net/software/aijianli-com/摘要： 这是一个软件替代品网站，将 aijianli.com 列为AI简历工具，并提供了功能描述和用户评分，列出了其他类似工具。URL： https://www.saasworthy.com/product/aijianli-com摘要： 这是一个SaaS软件评测网站，提供了 aijianli.com 的概述、定价（标注为免费）、功能列表和用户评价。URL： https://aitoptools.com/tool/aijianli-com摘要： 这是一个AI工具目录网站，简要介绍了 aijianli.com 的核心功能（AI生成、模板、一键优化）并标注其为免费工具。URL： https://www.v2ex.com/t/1057841摘要： 这是中文技术社区V2EX上的一个帖子，用户分享自己使用AI工具（包括可能的“AI简历”）的经历，但未直接确认是 aijianli.cn，讨论更偏向于AI辅助求职的体验。结论： 经过搜索，我未能找到专门针对 aijianli.cn 这个特定域名的、足够数量的独立第三方评测、媒体报道或社区讨论。以上链接大多指向 .com 域名或泛称“AI简历”。",
+                "stableDurationMs": 0,
+                "renderComplete": false,
+                "htmlLength": 3824,
+                "finalCount": 3
+              },
+              "extractedUrls": [
+                "https://www.toolify.ai/zh/ai-news/aijianli-com-evaluation摘要：",
+                "https://aisupremacy.com/aijianli-com-evaluation/摘要：",
+                "https://www.producthunt.com/products/aijianli-com摘要：",
+                "https://www.reddit.com/r/Resume/comments/wv09y5/anyone_used_aijianli_yet/摘要：",
+                "https://alternativeto.net/software/aijianli-com/摘要：",
+                "https://www.saasworthy.com/product/aijianli-com摘要：",
+                "https://aitoptools.com/tool/aijianli-com摘要：",
+                "https://www.v2ex.com/t/1057841摘要："
+              ],
+              "extractedDomains": [
+                "www.toolify.ai",
+                "aisupremacy.com",
+                "www.producthunt.com",
+                "www.reddit.com",
+                "alternativeto.net",
+                "www.saasworthy.com",
+                "aitoptools.com",
+                "www.v2ex.com"
+              ],
+              "keywordSummary": {
+                "expected": [
+                  "http"
+                ],
+                "hits": [
+                  "http"
+                ],
+                "missed": [],
+                "allHit": true
+              }
+            }
+          }
+        ],
+        "scenarioId": "geo-control-aijianli-cn",
+        "scenarioName": "GEO 对照组（aijianli.cn）"
+      }
+    }
+  ]
+}
